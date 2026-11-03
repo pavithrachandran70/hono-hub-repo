@@ -1,15 +1,15 @@
 ---
 schema_version: 1
 key: PER-103
-status: in_development
-current_node: dev
+status: pr_reviewed
+current_node: pr_review
 track: quick
 involved_repos:
 - hono
 depends_on: []
 owner: pavc
 lease_until: '2026-11-05T06:57:01.465526+00:00'
-revision: 54
+revision: 58
 hub_sha: null
 ticket_hash: f1eb27f689ca5cf4
 jira_hash: f1eb27f689ca5cf4
@@ -28,10 +28,11 @@ pr_ids:
   hub_plan: '1'
   hub_arch: '2'
   hub: '2'
-waiting_for: null
-tokens_in: 30159
-tokens_out: 4949
-cost_anthropic_usd: 0.164344
+  hono: '2'
+waiting_for: feature_pr_human
+tokens_in: 35794
+tokens_out: 4956
+cost_anthropic_usd: 0.181354
 history:
 - node: intake
   note: snapshot written
@@ -94,6 +95,21 @@ history:
 - node: dev
   note: done 01-hono
   at: '2026-11-03T10:04:21.753953+00:00'
+- node: pre_pr_qa
+  note: report written
+  at: '2026-11-03T10:04:25.519836+00:00'
+- node: open_pr
+  note: push hono ok
+  at: '2026-11-03T10:04:33.426122+00:00'
+- node: open_pr
+  note: PRs opened hono:2
+  at: '2026-11-03T10:04:33.426166+00:00'
+- node: pr_review
+  note: diff loaded hono chars=5539
+  at: '2026-11-03T10:04:34.667715+00:00'
+- node: pr_review
+  note: awaiting feature_pr_human
+  at: '2026-11-03T10:04:43.577934+00:00'
 ---
 
 # Feature state

@@ -15,9 +15,9 @@ Bug fix in TrieRouter's regex parameter handling when followed by a literal segm
 1. [x] **analyst (inline_story)** — Turn the ticket into a single implementable story with Given/When/Then AC and technical notes on the getPattern() lookahead bug.
    - focus: Focus on the getPattern() character class interpretation bug. Include technical notes on how LinearRouter already handles this correctly and the file plan showing which router files need changes. Map the multiple router test cases (TrieRouter, RegExpRouter, SmartRouter combinations, negative cases, file.html preservation) directly into the AC section so they are clear for implementation.
 2. [x] **architect_gate (review)** _(auto)_ — Human approval of specs and this plan before Dev.
-3. [ ] **dev** _(auto)_ — Loop delivery.
-4. [ ] **pre_pr_qa** _(auto)_ — Loop delivery.
-5. [ ] **open_pr** _(auto)_ — Loop delivery.
+3. [x] **dev** _(auto)_ — Loop delivery.
+4. [x] **pre_pr_qa** _(auto)_ — Loop delivery.
+5. [x] **open_pr** _(auto)_ — Loop delivery.
 6. [ ] **pr_review** _(auto)_ — Loop delivery.
 7. [ ] **merge** _(auto)_ — Loop delivery.
 
