@@ -1,0 +1,54 @@
+`TrieRouter` now matches a regex parameter followed by a literal bracket segment such as `/a/:id{[0-9]+}/[draft]`.
+
+`getPattern()` in `src/utils/url.ts` was putting the next segment into the lookahead unchanged, so `[draft]` was compiled as a character class. Literal `[` and `]` are now escaped. A following `:param` or `*` is still left out of that lookahead, so regex parameters keep their own brackets.
+
+Regression coverage:
+
+- `TrieRouter` returns `200` with body `42` for `GET /a/42/[draft]`, `404` for `/a/42/draft` and `/a/42/[other]`, and still matches `/a/42/file.html`.
+- A default `Hono` app (SmartRouter) returns `200` with body `42` for that route alone via RegExpRouter, and again after unrelated routes force a fallback to TrieRouter.
+
+Files changed:
+
+- `src/utils/url.ts`
+- `src/utils/url.test.ts`
+- `src/router/trie-router/router.test.ts`
+- `src/router/smart-router/router.test.ts`
+
+`pnpm lint` exited 0. `pnpm test` passed the router suites (RegExpRouter and LinearRouter unchanged). After a package build, the full run was 5771 passed. Four `build/jsx-types.test.ts` cases timed out at 5 seconds while spawning the TypeScript compiler against published JSX types; those are unrelated to this routing fix, so I left that harness alone.
+`TrieRouter` now matches a regex parameter followed by a literal bracket segment such as `/a/:id{[0-9]+}/[draft]`.
+
+`getPattern()` in `src/utils/url.ts` was building the next-segment lookahead without escaping brackets, so `[draft]` was compiled as a character class. Literal `[` and `]` are now escaped. A following `:param` or `*` is still left out of that lookahead, and segments without brackets (such as `file.html`) are unchanged.
+
+**Tests**
+- TrieRouter: `GET /a/42/[draft]` returns `200` / `42`; `/a/42/draft` and `/a/42/[other]` stay `404`; `/a/:id{[0-9]+}/file.html` still matches.
+- SmartRouter: the same route returns `200` / `42` with only that route (`RegExpRouter`) and after extra routes force a fallback to `TrieRouter`.
+- `RegExpRouter` and `LinearRouter` suites were not modified.
+
+**Files changed**
+- `src/utils/url.ts`
+- `src/utils/url.test.ts`
+- `src/router/trie-router/router.test.ts`
+- `src/router/smart-router/router.test.ts`
+
+`.gitignore` was already modified in the worktree and is not part of this story.
+
+**Verification**
+- Router and URL tests: 739 passed.
+- `pnpm lint` exited 0 (existing warnings only, none in these files).
+- Full `pnpm test`: 5760 passed. 15 failures are outside this change: `NO_COLOR=1` in this environment makes the color, logger, and `showRoutes` tests expect ANSI codes that are not printed, and `build/jsx-types.test.ts` hit its 5s `tsc` timeout.
+`getPattern()` now escapes literal `[` and `]` in the lookahead after a regex parameter, so `TrieRouter` matches `/a/:id{[0-9]+}/[draft]` for `GET /a/42/[draft]` and returns `200` with body `42`.
+
+A segment such as `[draft]` was inserted into the lookahead as a character class. Literal next segments are escaped (`\[draft\]`). A following `:param` or `*` is still left out of the lookahead, so those brackets stay part of the parameter pattern.
+
+**Files changed**
+- `src/utils/url.ts` — escape in `getPattern()`
+- `src/utils/url.test.ts` — bracket lookahead and following regex parameter
+- `src/router/trie-router/router.test.ts` — match, non-matches (`/a/42/draft`, `/a/42/[other]`), and `file.html`
+- `src/router/smart-router/router.test.ts` — single-route `RegExpRouter` and fallback to `TrieRouter`
+
+`RegExpRouter` and `LinearRouter` were not changed. `.gitignore` was already dirty and is outside this story.
+
+**Tests**
+- Router and URL tests passed, including `RegExpRouter` and `LinearRouter`.
+- `pnpm lint` exited 0. Remaining messages are existing warnings in unrelated files.
+- `pnpm test`: 5771 passed. The only failures are the four `build/jsx-types.test.ts` cases, which hit Vitest's 5s timeout while typechecking `build/fixtures/jsx-types` under the full worker load. The same file passed in about 8s when run with the router tests. That fixture was left as-is.
