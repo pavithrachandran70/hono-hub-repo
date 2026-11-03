@@ -12,7 +12,7 @@ Fix test failures on main caused by missing dist/ in type-check tests and a time
 
 ## Steps
 
-1. [ ] **analyst (inline_story)** — The ticket clearly states the problem and acceptance criteria; one story captures the fix.
+1. [x] **analyst (inline_story)** — The ticket clearly states the problem and acceptance criteria; one story captures the fix.
    - focus: Focus on two independent fixes: (1) make type-check tests run pnpm build first or skip when dist/ is missing, keeping the published-package validation; (2) fix the streamSSE abort test timeout by ensuring onAbort runs and the loop terminates.
 2. [ ] **architect_gate (review)** _(auto)_ — Human approval of specs and this plan before Dev.
 3. [ ] **dev** _(auto)_ — Loop delivery.
