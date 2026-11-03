@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "key": "PER-105",
+  "source": "llm",
+  "summary": "This feature fixes resource cleanup when middleware replaces c.res, affecting multiple middleware components and the response contract, requiring architecture and design work.",
+  "track_hint": "quick",
+  "loop": "feature_with_architecture",
+  "delivery": "delivery",
+  "pr_fix": [
+    "pr_fix_minor",
+    "pr_fix_moderate"
+  ],
+  "loops": [
+    "feature_with_architecture",
+    "delivery",
+    "pr_fix_minor",
+    "pr_fix_moderate"
+  ],
+  "steps": [
+    {
+      "node": "analyst",
+      "activity": "requirements",
+      "why": "Extract structured requirements from the ticket's bug description and multi-middleware acceptance criteria.",
+      "instructions": "Focus on the resource cleanup contract when c.res is replaced, covering all affected middleware (etag, prettyJSON, cache, compress, timeout, jsx-renderer, secure-headers).",
+      "auto": false,
+      "status": "done",
+      "rerun": false
+    },
+    {
+      "node": "architect",
+      "activity": "hld",
+      "why": "Design the response body cleanup contract and the mechanism for releasing discarded bodies across middleware.",
+      "instructions": "Define the contract for cleanup when c.res is replaced, ensuring stream cancellation and clone() cleanup work consistently across all middleware without breaking existing behavior.",
+      "auto": false,
+      "status": "done",
+      "rerun": false
+    },
+    {
+      "node": "scrum_master",
+      "activity": "breakdown",
+      "why": "Break down the work across affected middleware and the core response-replacement mechanism.",
+      "instructions": "Create stories for the core cleanup mechanism, etag fixes, prettyJSON fixes, verification of other middleware, and regression tests.",
+      "auto": false,
+      "status": "done",
+      "rerun": false
+    },
+    {
+      "node": "designer",
+      "activity": "lld",
+      "why": "Each story needs concrete implementation detail for the cleanup logic and test cases.",
+      "instructions": "Provide file plans and implementation notes for the response body cleanup mechanism, ensuring error handling doesn't break request processing.",
+      "auto": false,
+      "status": "done",
+      "rerun": false
+    },
+    {
+      "node": "critic",
+      "activity": "consistency_check",
+      "why": "Ensure consistency between HLD contract design, breakdown across middleware, and low-level implementation details.",
+      "instructions": "Verify the cleanup contract in the HLD matches the implementation approach in each story, and test coverage aligns with all acceptance criteria.",
+      "auto": false,
+      "status": "pending",
+      "rerun": false
+    },
+    {
+      "node": "merge_pack",
+      "activity": "pack",
+      "why": "Pack per-ticket specs into merged_plan.md for review.",
+      "instructions": "",
+      "auto": true,
+      "status": "pending",
+      "rerun": false
+    },
+    {
+      "node": "architect_gate",
+      "activity": "review",
+      "why": "Human approval of specs and this plan before Dev.",
+      "instructions": "",
+      "auto": true,
+      "status": "pending",
+      "rerun": true
+    },
+    {
+      "node": "dev",
+      "activity": null,
+      "why": "Loop delivery.",
+      "instructions": "",
+      "auto": true,
+      "status": "pending",
+      "rerun": false
+    },
+    {
+      "node": "pre_pr_qa",
+      "activity": null,
+      "why": "Loop delivery.",
+      "instructions": "",
+      "auto": true,
+      "status": "pending",
+      "rerun": false
+    },
+    {
+      "node": "open_pr",
+      "activity": null,
+      "why": "Loop delivery.",
+      "instructions": "",
+      "auto": true,
+      "status": "pending",
+      "rerun": false
+    },
+    {
+      "node": "pr_review",
+      "activity": null,
+      "why": "Loop delivery.",
+      "instructions": "",
+      "auto": true,
+      "status": "pending",
+      "rerun": false
+    },
+    {
+      "node": "merge",
+      "activity": null,
+      "why": "Loop delivery.",
+      "instructions": "",
+      "auto": true,
+      "status": "pending",
+      "rerun": false
+    }
+  ],
+  "skipped": [
+    {
+      "node": "tpm_gate",
+      "why": "Scope and acceptance criteria are clearly stated in the ticket; this is a technical bug fix with defined behavior."
+    },
+    {
+      "node": "test_architect",
+      "why": "Test cases map directly to the seven acceptance criteria and are straightforward enough to be handled in the designer's test sections."
+    }
+  ],
+  "suggested_roles": [],
+  "suggested_loops": [],
+  "notes": [],
+  "created_at": "2026-11-03T10:57:00.818416+00:00",
+  "version": 2,
+  "trigger": "review",
+  "gate": "plan_review",
+  "feedback": [
+    {
+      "id": "hub#5:issue-6601858716",
+      "source": "pr_conversation",
+      "body": "Change the loop from quick_fix to feature_with_architecture.\r\n\r\nKeep these steps, in this order:\r\n- analyst with activity requirements, not inline_story\r\n- architect, so it writes hld.md and the specs\r\n- scrum_master, so it writes breakdown.md and the stories\r\n- designer, so each story gets a low-level design\r\n- critic\r\n\r\nThis change crosses middleware and the response contract, so one inline story is not enough. Do not skip the architect or the designer.",
+      "author": "pavithrachandran70",
+      "path": null,
+      "line": null,
+      "pr": "hub#5"
+    }
+  ],
+  "feedback_errors": [],
+  "seen_feedback_ids": [
+    "hub#5:issue-6601858716"
+  ],
+  "change_summary": "Switched from quick_fix to feature_with_architecture, adding architect, scrum_master, designer, and critic to handle the cross-middleware response contract change.",
+  "changes": {
+    "added": [
+      "architect",
+      "scrum_master",
+      "designer",
+      "critic"
+    ],
+    "removed": [],
+    "rerun": [],
+    "kept": []
+  },
+  "addressed": [
+    {
+      "feedback_id": "hub#5:issue-6601858716",
+      "change": "Changed loop to feature_with_architecture; added analyst (requirements), architect, scrum_master, designer, and critic as requested."
+    }
+  ],
+  "unresolved_questions": [],
+  "requires_review": true
+}

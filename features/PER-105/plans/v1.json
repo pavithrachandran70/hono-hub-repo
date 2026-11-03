@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "key": "PER-105",
+  "source": "llm",
+  "summary": "A bug fix in one repo (hono) that updates middleware to cancel discarded response bodies when c.res is replaced; the ticket states clear behavior and acceptance criteria, so quick_fix is appropriate.",
+  "track_hint": "quick",
+  "loop": "quick_fix",
+  "delivery": "delivery",
+  "pr_fix": [
+    "pr_fix_minor",
+    "pr_fix_moderate"
+  ],
+  "loops": [
+    "quick_fix",
+    "delivery",
+    "pr_fix_minor",
+    "pr_fix_moderate"
+  ],
+  "steps": [
+    {
+      "node": "analyst",
+      "activity": "inline_story",
+      "why": "The ticket describes the bug and acceptance criteria clearly but needs a structured story with implementation notes.",
+      "instructions": "Write a complete implementable story with file plan, cancellation logic, and test cases. Focus on etag() and prettyJSON() middleware as primary examples; note that other middleware (cache, compress, timeout, jsx-renderer, secure-headers) must retain their current behavior. Include concrete implementation guidance on where to cancel bodies, how to handle clone() branches, error handling that prevents 500 responses, and regression test cases for: etag with preset ETag, etag with generated ETag, prettyJSON formatting, prettyJSON passthrough (204, non-JSON), body reuse, failed release, and header merging with set-cookie.",
+      "auto": false,
+      "status": "pending",
+      "rerun": false
+    },
+    {
+      "node": "architect_gate",
+      "activity": "review",
+      "why": "Human approval of specs and this plan before Dev.",
+      "instructions": "",
+      "auto": true,
+      "status": "pending",
+      "rerun": false
+    },
+    {
+      "node": "dev",
+      "activity": null,
+      "why": "Loop delivery.",
+      "instructions": "",
+      "auto": true,
+      "status": "pending",
+      "rerun": false
+    },
+    {
+      "node": "pre_pr_qa",
+      "activity": null,
+      "why": "Loop delivery.",
+      "instructions": "",
+      "auto": true,
+      "status": "pending",
+      "rerun": false
+    },
+    {
+      "node": "open_pr",
+      "activity": null,
+      "why": "Loop delivery.",
+      "instructions": "",
+      "auto": true,
+      "status": "pending",
+      "rerun": false
+    },
+    {
+      "node": "pr_review",
+      "activity": null,
+      "why": "Loop delivery.",
+      "instructions": "",
+      "auto": true,
+      "status": "pending",
+      "rerun": false
+    },
+    {
+      "node": "merge",
+      "activity": null,
+      "why": "Loop delivery.",
+      "instructions": "",
+      "auto": true,
+      "status": "pending",
+      "rerun": false
+    }
+  ],
+  "skipped": [
+    {
+      "node": "critic",
+      "why": "Only one spec artifact (the inline story) exists, so there is nothing to cross-check for consistency."
+    }
+  ],
+  "suggested_roles": [],
+  "suggested_loops": [],
+  "notes": [
+    "attempt 1: designer is not a step of loop quick_fix; test_architect is not a step of loop quick_fix"
+  ],
+  "created_at": "2026-11-03T10:51:21.137684+00:00",
+  "version": 1,
+  "trigger": "ticket",
+  "gate": null,
+  "feedback": [],
+  "feedback_errors": [],
+  "seen_feedback_ids": [],
+  "change_summary": "",
+  "changes": null,
+  "addressed": [],
+  "unresolved_questions": [],
+  "requires_review": true
+}

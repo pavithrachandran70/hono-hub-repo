@@ -32,13 +32,13 @@ This change crosses middleware and the response contract, so one inline story is
 
 ## Steps
 
-1. [ ] **analyst (requirements)** _(rerun)_ — Extract structured requirements from the ticket's bug description and multi-middleware acceptance criteria.
+1. [x] **analyst (requirements)** — Extract structured requirements from the ticket's bug description and multi-middleware acceptance criteria.
    - focus: Focus on the resource cleanup contract when c.res is replaced, covering all affected middleware (etag, prettyJSON, cache, compress, timeout, jsx-renderer, secure-headers).
-2. [ ] **architect (hld)** — Design the response body cleanup contract and the mechanism for releasing discarded bodies across middleware.
+2. [x] **architect (hld)** — Design the response body cleanup contract and the mechanism for releasing discarded bodies across middleware.
    - focus: Define the contract for cleanup when c.res is replaced, ensuring stream cancellation and clone() cleanup work consistently across all middleware without breaking existing behavior.
-3. [ ] **scrum_master (breakdown)** — Break down the work across affected middleware and the core response-replacement mechanism.
+3. [x] **scrum_master (breakdown)** — Break down the work across affected middleware and the core response-replacement mechanism.
    - focus: Create stories for the core cleanup mechanism, etag fixes, prettyJSON fixes, verification of other middleware, and regression tests.
-4. [ ] **designer (lld)** — Each story needs concrete implementation detail for the cleanup logic and test cases.
+4. [x] **designer (lld)** — Each story needs concrete implementation detail for the cleanup logic and test cases.
    - focus: Provide file plans and implementation notes for the response body cleanup mechanism, ensuring error handling doesn't break request processing.
 5. [ ] **critic (consistency_check)** — Ensure consistency between HLD contract design, breakdown across middleware, and low-level implementation details.
    - focus: Verify the cleanup contract in the HLD matches the implementation approach in each story, and test coverage aligns with all acceptance criteria.
