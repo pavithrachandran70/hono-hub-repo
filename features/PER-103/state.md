@@ -1,7 +1,7 @@
 ---
 schema_version: 1
 key: PER-103
-status: in_development
+status: escalated
 current_node: dev
 track: quick
 involved_repos:
@@ -9,7 +9,7 @@ involved_repos:
 depends_on: []
 owner: pavc
 lease_until: '2026-11-05T06:57:01.465526+00:00'
-revision: 38
+revision: 48
 hub_sha: null
 ticket_hash: f1eb27f689ca5cf4
 jira_hash: f1eb27f689ca5cf4
@@ -28,7 +28,7 @@ pr_ids:
   hub_plan: '1'
   hub_arch: '2'
   hub: '2'
-waiting_for: dirty_worktree
+waiting_for: dev_failure
 tokens_in: 30159
 tokens_out: 4949
 cost_anthropic_usd: 0.164344
@@ -82,6 +82,12 @@ history:
 - node: dev
   note: dirty worktree stashed
   at: '2026-11-03T09:34:49.585707+00:00'
+- node: dev
+  note: starting
+  at: '2026-11-03T09:36:26.951529+00:00'
+- node: dev
+  note: 'failed 01-hono: agent made no code changes (agent status=ok: no error)'
+  at: '2026-11-03T09:49:49.881242+00:00'
 ---
 
 # Feature state

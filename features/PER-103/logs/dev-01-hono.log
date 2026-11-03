@@ -52,3 +52,42 @@ A segment such as `[draft]` was inserted into the lookahead as a character class
 - Router and URL tests passed, including `RegExpRouter` and `LinearRouter`.
 - `pnpm lint` exited 0. Remaining messages are existing warnings in unrelated files.
 - `pnpm test`: 5771 passed. The only failures are the four `build/jsx-types.test.ts` cases, which hit Vitest's 5s timeout while typechecking `build/fixtures/jsx-types` under the full worker load. The same file passed in about 8s when run with the router tests. That fixture was left as-is.
+`TrieRouter` now matches a regex parameter followed by a literal bracket segment such as `/a/:id{[0-9]+}/[draft]`.
+
+`getPattern()` in `src/utils/url.ts` was building the next-segment lookahead without escaping `[` and `]`, so `[draft]` was compiled as a character class. Literal segments now escape those brackets. A following `:param` or `*` is still left out of the lookahead, so regex parameters are unchanged.
+
+**Files changed**
+
+- `src/utils/url.ts` — escape literal `[` and `]` in the lookahead
+- `src/utils/url.test.ts` — lookahead cases for `[draft]` and a following regex parameter
+- `src/router/trie-router/router.test.ts` — match, non-match, and `file.html` cases
+- `src/router/smart-router/router.test.ts` — single-route `RegExpRouter` path and fallback to `TrieRouter`
+
+**Tests**
+
+`pnpm test`: 5764 passed, 108 skipped. The 11 failures are color-output checks in `src/utils/color.test.ts`, `src/helper/dev/index.test.ts`, and `src/middleware/logger/index.test.ts`. This shell sets `NO_COLOR=1` and `FORCE_COLOR=0`, and those same tests fail with the story changes removed. Router and URL tests passed. `pnpm lint` exited 0 with existing warnings only.
+`TrieRouter` now matches a regex parameter followed by a literal bracket segment such as `/a/:id{[0-9]+}/[draft]`.
+
+`getPattern()` in `src/utils/url.ts` was building a lookahead from the next segment without escaping `[` and `]`. For `/a/:id{[0-9]+}/[draft]`, that turned `[draft]` into a character class, so `GET /a/42/[draft]` missed on `TrieRouter`. Literal next segments now escape those brackets. A following `:param` or `*` is still left out of the lookahead, so regex parameters are unchanged.
+
+Tests cover the reported route, non-matches for `/a/42/draft` and `/a/42/[other]`, a bracket-free segment (`file.html`), and `SmartRouter` both while it stays on `RegExpRouter` and after it falls back to `TrieRouter`.
+
+**Files changed**
+- `src/utils/url.ts`
+- `src/utils/url.test.ts`
+- `src/router/trie-router/router.test.ts`
+- `src/router/smart-router/router.test.ts`
+
+`pnpm lint` exited 0. `pnpm test` is 5775 passed and 108 skipped when `NO_COLOR` is unset. In this environment `NO_COLOR=1`, so the same command fails 11 existing color-output tests in the logger, `showRoutes`, and `getColorEnabled`. Those failures are unrelated to this route fix.
+`TrieRouter` now matches a regex parameter followed by a literal bracket segment, such as `/a/:id{[0-9]+}/[draft]`.
+
+`getPattern()` in `src/utils/url.ts` was putting the next segment into the lookahead unchanged, so `[draft]` was read as the character class `[draf]`. Literal `[` and `]` are now escaped. A following `:param` or `*` is still left out of that lookahead, so regex brackets stay intentional.
+
+**Files changed**
+
+- `src/utils/url.ts` — escape literal brackets in the regex-parameter lookahead
+- `src/utils/url.test.ts` — unit tests for a bracket literal and a following regex parameter
+- `src/router/trie-router/router.test.ts` — `GET /a/42/[draft]` returns `42`; `/a/42/draft` and `/a/42/[other]` stay `404`; `/a/42/file.html` still matches
+- `src/router/smart-router/router.test.ts` — the same route returns `42` on `RegExpRouter` and after `SmartRouter` falls back to `TrieRouter`
+
+`pnpm lint` completed with only existing warnings. `pnpm test` is green: 5775 passed, 108 skipped. A first run failed only because this environment sets `NO_COLOR=1`, which turns off ANSI colors in the logger and `showRoutes` tests. Those pass with `NO_COLOR` unset.
