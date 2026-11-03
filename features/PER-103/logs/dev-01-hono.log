@@ -91,3 +91,17 @@ Tests cover the reported route, non-matches for `/a/42/draft` and `/a/42/[other]
 - `src/router/smart-router/router.test.ts` — the same route returns `42` on `RegExpRouter` and after `SmartRouter` falls back to `TrieRouter`
 
 `pnpm lint` completed with only existing warnings. `pnpm test` is green: 5775 passed, 108 skipped. A first run failed only because this environment sets `NO_COLOR=1`, which turns off ANSI colors in the logger and `showRoutes` tests. Those pass with `NO_COLOR` unset.
+`TrieRouter` now matches a regex parameter followed by a literal bracket segment, such as `/a/:id{[0-9]+}/[draft]`.
+
+`getPattern()` in `src/utils/url.ts` was putting the next segment into a lookahead without escaping. For `[draft]` that became the character class `[draf]` (matching `d`, `r`, `a`, or `f`), so `GET /a/42/[draft]` missed and returned 404. Literal `[` and `]` in that lookahead are now escaped. A following regex parameter is left unchanged, because those brackets belong to its pattern.
+
+Regression coverage is in the TrieRouter and SmartRouter tests: the matching request returns 200 with body `42`, `/a/42/draft` and `/a/42/[other]` stay 404, and `file.html` still matches. The SmartRouter cases cover both the single-route `RegExpRouter` path and the fallback to `TrieRouter`.
+
+`pnpm lint` passed. `pnpm test` passed: 5776 tests, 108 skipped. The first run reported 11 failures in the logger, `showRoutes`, and color tests because this shell sets `NO_COLOR=1`; those tests expect ANSI color codes. Re-running with `NO_COLOR` unset passed the full suite.
+
+Files changed:
+
+- `src/utils/url.ts`
+- `src/utils/url.test.ts`
+- `src/router/trie-router/router.test.ts`
+- `src/router/smart-router/router.test.ts`
