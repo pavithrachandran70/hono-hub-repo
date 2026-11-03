@@ -1,0 +1,15 @@
+Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
+Retry attempt 1...
+The two test failures on this branch are fixed. `pnpm test` passes when terminal color is allowed: **5767 passed**, 108 skipped.
+
+**Missing `dist/`.** `build/declaration-emit.test.ts` and `build/jsx-types.test.ts` now build the package in `beforeAll` when the published output is not already there, and the four JSX cases use a 30-second timeout. A lock makes the two files share one `pnpm build`, and they wait until `dist/types` and `dist/cjs/package.json` exist so they do not type-check a half-written build.
+
+**`streamSSE` abort timeout.** In `runtime-tests/node/index.test.ts`, aborting after 10ms cancelled the request before the handler registered `onAbort`, so `while (!aborted)` never finished. The test now waits for response headers, then aborts, and gives up after one second if `onAbort` does not run. The same race was in the plain `stream` test, so that case got the same wait.
+
+In this sandbox `NO_COLOR=1` is set, so a raw `pnpm test` still fails 11 color assertions in the logger, dev routes, and `getColorEnabled` tests. Those files were not part of this change. With `NO_COLOR` unset, the full suite exits 0.
+
+Files changed:
+
+- `build/declaration-emit.test.ts`
+- `build/jsx-types.test.ts`
+- `runtime-tests/node/index.test.ts`

@@ -1,0 +1,1702 @@
+===== 2026-11-03T09:11:18+00:00 attempt 1: PASS =====
+$ pnpm lint
+
+  ! eslint(no-unused-vars): Parameter 'evt' is declared but never used. Unused parameters should start with a '_'.
+    ,-[src/adapter/cloudflare-workers/websocket.test.ts:64:17]
+ 63 |       upgradeWebSocket(() => ({
+ 64 |         onClose(evt, ws) {
+    :                 ^|^
+    :                  `-- 'evt' is declared here
+ 65 |           resolve(true)
+    `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'ws' is declared but never used. Unused parameters should start with a '_'.
+    ,-[src/adapter/cloudflare-workers/websocket.test.ts:64:22]
+ 63 |       upgradeWebSocket(() => ({
+ 64 |         onClose(evt, ws) {
+    :                      ^|
+    :                       `-- 'ws' is declared here
+ 65 |           resolve(true)
+    `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'evt' is declared but never used. Unused parameters should start with a '_'.
+    ,-[src/adapter/cloudflare-workers/websocket.test.ts:87:17]
+ 86 |       upgradeWebSocket(() => ({
+ 87 |         onError(evt, ws) {
+    :                 ^|^
+    :                  `-- 'evt' is declared here
+ 88 |           resolve(true)
+    `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'ws' is declared but never used. Unused parameters should start with a '_'.
+    ,-[src/adapter/cloudflare-workers/websocket.test.ts:87:22]
+ 86 |       upgradeWebSocket(() => ({
+ 87 |         onError(evt, ws) {
+    :                      ^|
+    :                       `-- 'ws' is declared here
+ 88 |           resolve(true)
+    `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'evt' is declared but never used. Unused parameters should start with a '_'.
+     ,-[src/adapter/cloudflare-workers/websocket.test.ts:109:19]
+ 108 |       upgradeWebSocket(() => ({
+ 109 |         onMessage(evt, ws) {
+     :                   ^|^
+     :                    `-- 'evt' is declared here
+ 110 |           resolve(ws)
+     `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'evt' is declared but never used. Unused parameters should start with a '_'.
+     ,-[src/adapter/cloudflare-workers/websocket.test.ts:138:19]
+ 137 |       upgradeWebSocket(() => ({
+ 138 |         onMessage(evt, ws) {
+     :                   ^|^
+     :                    `-- 'evt' is declared here
+ 139 |           resolve(ws)
+     `----
+  help: Consider removing this parameter.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[src/adapter/cloudflare-workers/websocket.test.ts:105:28]
+ 104 | 
+ 105 |   const sendWsRef: Promise<any> = new Promise((resolve) =>
+     :                            ^^^
+ 106 |     app.get(
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[src/adapter/cloudflare-workers/websocket.test.ts:134:29]
+ 133 | 
+ 134 |   const closeWsRef: Promise<any> = new Promise((resolve) =>
+     :                             ^^^
+ 135 |     app.get(
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! eslint(no-unused-vars): Parameter 'evt' is declared but never used. Unused parameters should start with a '_'.
+    ,-[adapters/cloudflare-workers/src/websocket.test.ts:63:17]
+ 62 |       upgradeWebSocket(() => ({
+ 63 |         onClose(evt, ws) {
+    :                 ^|^
+    :                  `-- 'evt' is declared here
+ 64 |           resolve(true)
+    `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'ws' is declared but never used. Unused parameters should start with a '_'.
+    ,-[adapters/cloudflare-workers/src/websocket.test.ts:63:22]
+ 62 |       upgradeWebSocket(() => ({
+ 63 |         onClose(evt, ws) {
+    :                      ^|
+    :                       `-- 'ws' is declared here
+ 64 |           resolve(true)
+    `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'evt' is declared but never used. Unused parameters should start with a '_'.
+    ,-[adapters/cloudflare-workers/src/websocket.test.ts:86:17]
+ 85 |       upgradeWebSocket(() => ({
+ 86 |         onError(evt, ws) {
+    :                 ^|^
+    :                  `-- 'evt' is declared here
+ 87 |           resolve(true)
+    `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'ws' is declared but never used. Unused parameters should start with a '_'.
+    ,-[adapters/cloudflare-workers/src/websocket.test.ts:86:22]
+ 85 |       upgradeWebSocket(() => ({
+ 86 |         onError(evt, ws) {
+    :                      ^|
+    :                       `-- 'ws' is declared here
+ 87 |           resolve(true)
+    `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'evt' is declared but never used. Unused parameters should start with a '_'.
+     ,-[adapters/cloudflare-workers/src/websocket.test.ts:108:19]
+ 107 |       upgradeWebSocket(() => ({
+ 108 |         onMessage(evt, ws) {
+     :                   ^|^
+     :                    `-- 'evt' is declared here
+ 109 |           resolve(ws)
+     `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'evt' is declared but never used. Unused parameters should start with a '_'.
+     ,-[adapters/cloudflare-workers/src/websocket.test.ts:137:19]
+ 136 |       upgradeWebSocket(() => ({
+ 137 |         onMessage(evt, ws) {
+     :                   ^|^
+     :                    `-- 'evt' is declared here
+ 138 |           resolve(ws)
+     `----
+  help: Consider removing this parameter.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[adapters/cloudflare-workers/src/websocket.test.ts:104:28]
+ 103 | 
+ 104 |   const sendWsRef: Promise<any> = new Promise((resolve) =>
+     :                            ^^^
+ 105 |     app.get(
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[adapters/cloudflare-workers/src/websocket.test.ts:133:29]
+ 132 | 
+ 133 |   const closeWsRef: Promise<any> = new Promise((resolve) =>
+     :                             ^^^
+ 134 |     app.get(
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/adapter/cloudflare-pages/handler.ts:15:55]
+ 14 |  */
+ 15 | export type EventContext<Env = {}, P extends string = any, Data = Record<string, unknown>> = {
+    :                                                       ^^^
+ 16 |   request: Request
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/adapter/cloudflare-pages/handler.ts:58:73]
+ 57 |  */
+ 58 | export function handleMiddleware<E extends Env = {}, P extends string = any, I extends Input = {}>(
+    :                                                                         ^^^
+ 59 |   middleware: MiddlewareHandler<
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[src/client/types.ts:285:28]
+ 284 | export type FilterClientResponseByStatusCode<
+ 285 |   T extends ClientResponse<any, any, any>,
+     :                            ^^^
+ 286 |   U extends number = StatusCode,
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[src/client/types.ts:285:33]
+ 284 | export type FilterClientResponseByStatusCode<
+ 285 |   T extends ClientResponse<any, any, any>,
+     :                                 ^^^
+ 286 |   U extends number = StatusCode,
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[src/client/types.ts:285:38]
+ 284 | export type FilterClientResponseByStatusCode<
+ 285 |   T extends ClientResponse<any, any, any>,
+     :                                      ^^^
+ 286 |   U extends number = StatusCode,
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[src/client/types.ts:312:22]
+ 311 | export type Client<T, Prefix extends string> =
+ 312 |   T extends HonoBase<any, infer S, any>
+     :                      ^^^
+ 313 |     ? S extends Record<infer K, Schema>
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[src/client/types.ts:312:36]
+ 311 | export type Client<T, Prefix extends string> =
+ 312 |   T extends HonoBase<any, infer S, any>
+     :                                    ^^^
+ 313 |     ? S extends Record<infer K, Schema>
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/client/fetch-result-please.ts:14:80]
+ 13 |  */
+ 14 | export async function fetchRP(fetchRes: Response | Promise<Response>): Promise<any> {
+    :                                                                                ^^^
+ 15 |   const _fetchRes = (await fetchRes) as unknown as Response & {
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/client/fetch-result-please.ts:16:12]
+ 15 |   const _fetchRes = (await fetchRes) as unknown as Response & {
+ 16 |     _data: any
+    :            ^^^
+ 17 |     /**
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/client/fetch-result-please.ts:22:17]
+ 21 |      */
+ 22 |     _bodyInit?: any
+    :                 ^^^
+ 23 |   }
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/client/fetch-result-please.ts:50:19]
+ 49 |    */
+ 50 |   public detail?: any
+    :                   ^^^
+ 51 |   /**
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/client/fetch-result-please.ts:54:17]
+ 53 |    */
+ 54 |   public code?: any
+    :                 ^^^
+ 55 |   /**
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/client/fetch-result-please.ts:58:16]
+ 57 |    */
+ 58 |   public log?: any
+    :                ^^^
+ 59 |   /**
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/client/fetch-result-please.ts:62:23]
+ 61 |    */
+ 62 |   public statusCode?: any
+    :                       ^^^
+ 63 | 
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/client/fetch-result-please.ts:66:25]
+ 65 |     message: string,
+ 66 |     options: { detail?: any; code?: any; statusCode?: number; log?: any } = {}
+    :                         ^^^
+ 67 |   ) {
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/client/fetch-result-please.ts:66:37]
+ 65 |     message: string,
+ 66 |     options: { detail?: any; code?: any; statusCode?: number; log?: any } = {}
+    :                                     ^^^
+ 67 |   ) {
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/client/fetch-result-please.ts:66:69]
+ 65 |     message: string,
+ 66 |     options: { detail?: any; code?: any; statusCode?: number; log?: any } = {}
+    :                                                                     ^^^
+ 67 |   ) {
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+   ,-[benchmarks/jsx/src/react-jsx/preact.ts:4:61]
+ 3 | 
+ 4 | export const render = () => renderToString(buildPage()() as any)
+   :                                                             ^^^
+   `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[src/middleware/language/index.test.ts:452:40]
+ 451 |         createTestApp({
+ 452 |           order: ['invalidDetector' as any],
+     :                                        ^^^
+ 453 |         })
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+   ,-[benchmarks/jsx/src/react-jsx/react.ts:4:61]
+ 3 | 
+ 4 | export const render = () => renderToString(buildPage()() as any)
+   :                                                             ^^^
+   `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! eslint(no-unused-vars): Parameter 'jsx' is declared but never used. Unused parameters should start with a '_'.
+   ,-[benchmarks/jsx/src/page-react.tsx:4:29]
+ 3 | 
+ 4 | export const buildPage = ({ jsx, Fragment }: { jsx: any; Fragment: any }) => {
+   :                             ^|^
+   :                              `-- 'jsx' is declared here
+ 5 |   const Content = () => (
+   `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'Fragment' is declared but never used. Unused parameters should start with a '_'.
+   ,-[benchmarks/jsx/src/page-react.tsx:4:34]
+ 3 | 
+ 4 | export const buildPage = ({ jsx, Fragment }: { jsx: any; Fragment: any }) => {
+   :                                  ^^^^|^^^
+   :                                      `-- 'Fragment' is declared here
+ 5 |   const Content = () => (
+   `----
+  help: Consider removing this parameter.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+   ,-[benchmarks/jsx/src/page-react.tsx:4:53]
+ 3 | 
+ 4 | export const buildPage = ({ jsx, Fragment }: { jsx: any; Fragment: any }) => {
+   :                                                     ^^^
+ 5 |   const Content = () => (
+   `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+   ,-[benchmarks/jsx/src/page-react.tsx:4:68]
+ 3 | 
+ 4 | export const buildPage = ({ jsx, Fragment }: { jsx: any; Fragment: any }) => {
+   :                                                                    ^^^
+ 5 |   const Content = () => (
+   `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[adapters/bun/src/websocket.ts:48:49]
+ 47 | 
+ 48 | export const upgradeWebSocket: UpgradeWebSocket<any> = defineWebSocketHelper((c, events) => {
+    :                                                 ^^^
+ 49 |   const server = getBunServer<{
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/adapter/bun/websocket.ts:59:49]
+ 58 |  */
+ 59 | export const upgradeWebSocket: UpgradeWebSocket<any> = defineWebSocketHelper((c, events) => {
+    :                                                 ^^^
+ 60 |   const server = getBunServer<{
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! eslint(no-unused-vars): Type 'JSX' is imported but never used.
+   ,-[build/fixtures/jsx-types/index.tsx:1:15]
+ 1 | import type { JSX } from 'hono/jsx'
+   :               ^|^
+   :                `-- 'JSX' is imported here
+ 2 | 
+   `----
+  help: Consider removing this import.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/helper/factory/index.test.ts:71:39]
+ 70 |     })
+ 71 |     type Expected = MiddlewareHandler<any, string, {}, Response>
+    :                                       ^^^
+ 72 |     type _verify = Expect<Equal<Expected, typeof middleware>>
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[src/helper/factory/index.test.ts:350:41]
+ 349 | 
+ 350 |     type ExtractOutput<R> = R extends H<any, any, any, TypedResponse<infer Inner>> ? Inner : never
+     :                                         ^^^
+ 351 | 
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[src/helper/factory/index.test.ts:350:46]
+ 349 | 
+ 350 |     type ExtractOutput<R> = R extends H<any, any, any, TypedResponse<infer Inner>> ? Inner : never
+     :                                              ^^^
+ 351 | 
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[src/helper/factory/index.test.ts:350:51]
+ 349 | 
+ 350 |     type ExtractOutput<R> = R extends H<any, any, any, TypedResponse<infer Inner>> ? Inner : never
+     :                                                   ^^^
+ 351 | 
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[src/middleware/jwt/index.test.ts:742:45]
+ 741 |         const payload = c.var.jwtPayload
+ 742 |         expectTypeOf(payload).toEqualTypeOf<any>()
+     :                                             ^^^
+ 743 |         return c.json(payload)
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+   ,-[benchmarks/jsx/src/preact.ts:5:81]
+ 4 | 
+ 5 | export const render = () => renderToString(buildPage({ jsx: h, Fragment })() as any)
+   :                                                                                 ^^^
+   `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! eslint(no-unused-vars): Parameter 'jsx' is declared but never used. Unused parameters should start with a '_'.
+   ,-[benchmarks/jsx/src/page.tsx:4:29]
+ 3 | 
+ 4 | export const buildPage = ({ jsx, Fragment }: { jsx: any; Fragment: any }) => {
+   :                             ^|^
+   :                              `-- 'jsx' is declared here
+ 5 |   const Content = () => (
+   `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter 'Fragment' is declared but never used. Unused parameters should start with a '_'.
+   ,-[benchmarks/jsx/src/page.tsx:4:34]
+ 3 | 
+ 4 | export const buildPage = ({ jsx, Fragment }: { jsx: any; Fragment: any }) => {
+   :                                  ^^^^|^^^
+   :                                      `-- 'Fragment' is declared here
+ 5 |   const Content = () => (
+   `----
+  help: Consider removing this parameter.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+   ,-[benchmarks/jsx/src/page.tsx:4:53]
+ 3 | 
+ 4 | export const buildPage = ({ jsx, Fragment }: { jsx: any; Fragment: any }) => {
+   :                                                     ^^^
+ 5 |   const Content = () => (
+   `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+   ,-[benchmarks/jsx/src/page.tsx:4:68]
+ 3 | 
+ 4 | export const buildPage = ({ jsx, Fragment }: { jsx: any; Fragment: any }) => {
+   :                                                                    ^^^
+ 5 |   const Content = () => (
+   `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/validator/validator.ts:28:64]
+ 27 | 
+ 28 | export type ExtractValidationResponse<VF> = VF extends (value: any, c: any) => infer R
+    :                                                                ^^^
+ 29 |   ? R extends Promise<infer PR>
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/validator/validator.ts:28:72]
+ 27 | 
+ 28 | export type ExtractValidationResponse<VF> = VF extends (value: any, c: any) => infer R
+    :                                                                        ^^^
+ 29 |   ? R extends Promise<infer PR>
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+   ,-[benchmarks/jsx/src/react.ts:5:93]
+ 4 | 
+ 5 | export const render = () => renderToString(buildPage({ jsx: createElement, Fragment })() as any)
+   :                                                                                             ^^^
+   `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+      ,-[src/client/client.test.ts:2084:64]
+ 2083 |     // @ts-expect-error search route does not explicitly define $ws in mock AppType
+ 2084 |     client.search.$ws({ query: { q: 'test', tags: undefined as any } })
+      :                                                                ^^^
+ 2085 | 
+      `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+     ,-[src/request.test.ts:130:35]
+ 129 |       const rawRequest = new Request('http://localhost/users/123')
+ 130 |       const req = new HonoRequest<any>(rawRequest, '/users/123', [
+     :                                   ^^^
+ 131 |         [[[undefined, {} as RouterRoute], { id: '123' }]],
+     `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+Found 58 warnings and 0 errors.
+Finished in 2.2s on 457 files with 86 rules using 12 threads.
+
+$ vp lint src runtime-tests build perf-measures benchmarks adapters
+
+(exit 0)
+$ pnpm test
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.0.1 [39m[90m/home/pavc/.adlc/worktrees/hono/PER-104/hono[39m
+      [2mCoverage enabled with [22m[33mv8[39m
+
+ [32m✓[39m [30m[45m jsx-runtime-default [49m[39m src/jsx/dom/server.test.tsx [2m([22m[2m27 tests[22m[2m)[22m[32m 106[2mms[22m[39m
+ [32m✓[39m [30m[45m jsx-runtime-default [49m[39m src/jsx/dom/hooks/index.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 576[2mms[22m[39m
+   [32m✓[39m Hooks [2m(5)[22m
+     [32m✓[39m useActionState [2m(2)[22m
+       [33m[2m✓[22m[39m should return initial state[33m 340[2mms[22m[39m
+ [32m✓[39m [30m[45m jsx-runtime-default [49m[39m src/jsx/dom/client.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 472[2mms[22m[39m
+   [32m✓[39m createRoot [2m(3)[22m
+     [33m[2m✓[22m[39m render / unmount[33m 319[2mms[22m[39m
+ [32m✓[39m [30m[45m jsx-runtime-default [49m[39m src/jsx/dom/components.test.tsx [2m([22m[2m22 tests[22m[2m)[22m[33m 788[2mms[22m[39m
+ [32m✓[39m [30m[45m jsx-runtime-default [49m[39m src/jsx/dom/context.test.tsx [2m([22m[2m12 tests[22m[2m)[22m[33m 683[2mms[22m[39m
+ [32m✓[39m [30m[45m jsx-runtime-default [49m[39m src/jsx/hooks/dom.test.tsx [2m([22m[2m27 tests[22m[2m)[22m[33m 1193[2mms[22m[39m
+ [32m✓[39m [30m[42m fastly [49m[39m index.test.ts [2m([22m[2m6 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[32m 129[2mms[22m[39m
+ [32m✓[39m [30m[45m jsx-runtime-default [49m[39m src/jsx/dom/css.test.tsx [2m([22m[2m35 tests[22m[2m | [22m[33m3 skipped[39m[2m)[22m[33m 1085[2mms[22m[39m
+ [32m✓[39m [30m[45m jsx-runtime-default [49m[39m src/jsx/dom/intrinsic-element/components.test.tsx [2m([22m[2m60 tests[22m[2m)[22m[33m 1986[2mms[22m[39m
+ [32m✓[39m [30m[43m jsx-runtime-dom [49m[39m src/jsx/dom/server.test.tsx [2m([22m[2m27 tests[22m[2m)[22m[32m 230[2mms[22m[39m
+ [32m✓[39m [30m[43m jsx-runtime-dom [49m[39m src/jsx/dom/context.test.tsx [2m([22m[2m12 tests[22m[2m)[22m[33m 682[2mms[22m[39m
+ [32m✓[39m [30m[43m jsx-runtime-dom [49m[39m src/jsx/dom/components.test.tsx [2m([22m[2m22 tests[22m[2m)[22m[33m 2006[2mms[22m[39m
+   [32m✓[39m Common [2m(11)[22m
+     [32m✓[39m Suspense [2m(7)[22m
+       [33m[2m✓[22m[39m with use()[33m 372[2mms[22m[39m
+       [33m[2m✓[22m[39m with use() update[33m 310[2mms[22m[39m
+ [32m✓[39m [30m[43m jsx-runtime-dom [49m[39m src/jsx/dom/hooks/index.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 534[2mms[22m[39m
+ [32m✓[39m [30m[43m jsx-runtime-dom [49m[39m src/jsx/dom/css.test.tsx [2m([22m[2m35 tests[22m[2m | [22m[33m3 skipped[39m[2m)[22m[33m 1830[2mms[22m[39m
+ [32m✓[39m [30m[43m jsx-runtime-dom [49m[39m src/jsx/dom/intrinsic-element/components.test.tsx [2m([22m[2m60 tests[22m[2m)[22m[33m 3842[2mms[22m[39m
+   [32m✓[39m intrinsic element [2m(57)[22m
+     [32m✓[39m document metadata [2m(48)[22m
+       [32m✓[39m title element [2m(5)[22m
+         [33m[2m✓[22m[39m should be inserted into head[33m 451[2mms[22m[39m
+     [32m✓[39m input element [2m(3)[22m
+       [33m[2m✓[22m[39m should accept string as formAction[33m 316[2mms[22m[39m
+ [32m✓[39m [30m[43m jsx-runtime-dom [49m[39m src/jsx/hooks/dom.test.tsx [2m([22m[2m27 tests[22m[2m)[22m[33m 3102[2mms[22m[39m
+   [32m✓[39m Hooks [2m(27)[22m
+     [32m✓[39m useReducer() [2m(1)[22m
+       [33m[2m✓[22m[39m simple[33m 1038[2mms[22m[39m
+ [32m✓[39m [30m[43m jsx-runtime-dom [49m[39m src/jsx/dom/client.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 1029[2mms[22m[39m
+   [32m✓[39m createRoot [2m(3)[22m
+     [33m[2m✓[22m[39m render / unmount[33m 514[2mms[22m[39m
+ [32m✓[39m [30m[45m jsx-runtime-default [49m[39m src/jsx/dom/index.test.tsx [2m([22m[2m318 tests[22m[2m)[22m[33m 9610[2mms[22m[39m
+   [32m✓[39m DOM [2m(267)[22m
+     [32m✓[39m performance [2m(4)[22m
+       [33m[2m✓[22m[39m should be O(N) for each additional element[33m 322[2mms[22m[39m
+[90mstdout[2m | src/jsx/streaming.test.tsx[2m > [22m[2mStreaming[2m > [22m[2mreject()
+[22m[39m[90mundefined[39m
+
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/dom/components.test.tsx [2m([22m[2m22 tests[22m[2m)[22m[33m 1121[2mms[22m[39m
+   [32m✓[39m Common [2m(11)[22m
+     [32m✓[39m Suspense [2m(7)[22m
+       [33m[2m✓[22m[39m has no lazy load content[33m 425[2mms[22m[39m
+[90mstdout[2m | src/jsx/streaming.test.tsx[2m > [22m[2mStreaming[2m > [22m[2mpops buildDataStack when a deferred re-render rejects
+[22m[39mError: boom
+    at Content [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/jsx/streaming.test.tsx:1108:13[90m)[39m
+    at JSXFunctionNode.toStringToBuffer [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/jsx/base.ts:324:40[90m)[39m
+    at render [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/jsx/base.ts:230:12[90m)[39m
+    at runWithRenderContext [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/jsx/context.ts:164:12[90m)[39m
+    at JSXFunctionNode.toString [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/jsx/base.ts:237:12[90m)[39m
+    at resolveChildEarly [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/jsx/components.ts:38:23[90m)[39m
+    at Array.map (<anonymous>)
+    at childrenToString [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/jsx/components.ts:16:28[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/jsx/streaming.ts:83:20
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/jsx/context.ts:137:22
+
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/streaming.test.tsx [2m([22m[2m43 tests[22m[2m)[22m[33m 1476[2mms[22m[39m
+   [32m✓[39m Streaming [2m(43)[22m
+     [33m[2m✓[22m[39m Suspense / renderToReadableStream[33m 446[2mms[22m[39m
+ [32m✓[39m [30m[43m jsx-runtime-dom [49m[39m src/jsx/dom/index.test.tsx [2m([22m[2m318 tests[22m[2m)[22m[33m 9653[2mms[22m[39m
+   [32m✓[39m DOM [2m(267)[22m
+     [33m[2m✓[22m[39m simple App[33m 333[2mms[22m[39m
+     [32m✓[39m performance [2m(4)[22m
+       [33m[2m✓[22m[39m should be O(N) for each additional element[33m 827[2mms[22m[39m
+     [32m✓[39m large keyed updates [2m(21)[22m
+       [33m[2m✓[22m[39m preserves state and cleanup order after indexing followed by keyed children[33m 438[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/compress/index.test.ts [2m([22m[2m45 tests[22m[2m)[22m[33m 3476[2mms[22m[39m
+   [32m✓[39m Compress Middleware [2m(45)[22m
+     [32m✓[39m Streaming Responses [2m(3)[22m
+       [33m[2m✓[22m[39m should compress streaming responses written in multiple chunks[33m 2702[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/dom/intrinsic-element/components.test.tsx [2m([22m[2m60 tests[22m[2m)[22m[33m 2457[2mms[22m[39m
+   [32m✓[39m intrinsic element [2m(57)[22m
+     [32m✓[39m document metadata [2m(48)[22m
+       [32m✓[39m title element [2m(5)[22m
+         [33m[2m✓[22m[39m should be inserted into head[33m 433[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/logger/index.test.ts [2m([22m[2m15 tests[22m[2m)[22m[33m 2239[2mms[22m[39m
+   [32m✓[39m Logger by Middleware [2m(10)[22m
+     [33m[2m✓[22m[39m Time in seconds[33m 1011[2mms[22m[39m
+   [32m✓[39m Logger by Middleware in NO_COLOR [2m(5)[22m
+     [33m[2m✓[22m[39m Time in seconds[33m 1003[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/timeout/index.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 4491[2mms[22m[39m
+   [32m✓[39m Timeout API [2m(4)[22m
+     [33m[2m✓[22m[39m Should trigger default timeout exception[33m 1256[2mms[22m[39m
+     [33m[2m✓[22m[39m Should apply custom exception with function[33m 1103[2mms[22m[39m
+     [33m[2m✓[22m[39m Error timeout with custom status code and message[33m 1205[2mms[22m[39m
+     [33m[2m✓[22m[39m No Timeout should pass[33m 907[2mms[22m[39m
+[90mstdout[2m | src/router/reg-exp-router/prepared-router.test.ts[2m > [22m[2mPreparedRegExpRouter[2m > [22m[2mCommon[2m > [22m[2mComplex[2m > [22m[2mParameter with {.*} regexp
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/reg-exp-router/prepared-router.test.ts[2m > [22m[2mPreparedRegExpRouter[2m > [22m[2mCommon[2m > [22m[2mDuplicate param name[2m > [22m[2mparent
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/reg-exp-router/prepared-router.test.ts[2m > [22m[2mPreparedRegExpRouter[2m > [22m[2mCommon[2m > [22m[2mDuplicate param name[2m > [22m[2mchild
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/reg-exp-router/prepared-router.test.ts[2m > [22m[2mPreparedRegExpRouter[2m > [22m[2mCommon[2m > [22m[2mIncluding slashes[2m > [22m[2mGET /js/main.js
+[22m[39mSkip: This route can not be added with `:label` to PreparedRegExpRouter. This is ambiguous
+
+[90mstdout[2m | src/router/reg-exp-router/prepared-router.test.ts[2m > [22m[2mPreparedRegExpRouter[2m > [22m[2mCommon[2m > [22m[2mCapture complex multiple directories[2m > [22m[2mGET /part1/middle-b/latest
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/reg-exp-router/prepared-router.test.ts[2m > [22m[2mPreparedRegExpRouter[2m > [22m[2mCommon[2m > [22m[2mCapture complex multiple directories[2m > [22m[2mGET /part1/middle-b/end-c/latest
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/reg-exp-router/prepared-router.test.ts[2m > [22m[2mPreparedRegExpRouter[2m > [22m[2mCommon[2m > [22m[2mCapture Group[2m > [22m[2mComplex capturing group[2m > [22m[2mGET request
+[22m[39mSkip: UnsupportedPath
+
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/bearer-auth/index.test.ts [2m([22m[2m53 tests[22m[2m)[22m[33m 1248[2mms[22m[39m
+   [32m✓[39m Bearer Auth by Middleware [2m(45)[22m
+     [33m[2m✓[22m[39m Should authorize[33m 318[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/router/reg-exp-router/prepared-router.test.ts [2m([22m[2m193 tests[22m[2m | [22m[33m7 skipped[39m[2m)[22m[33m 734[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/jwt/jwt.test.ts [2m([22m[2m92 tests[22m[2m)[22m[33m 6180[2mms[22m[39m
+   [32m✓[39m JWT [2m(62)[22m
+     [33m[2m✓[22m[39m RS256 sign & verify[33m 437[2mms[22m[39m
+     [33m[2m✓[22m[39m RS384 sign & verify[33m 479[2mms[22m[39m
+     [33m[2m✓[22m[39m RS512 sign & verify[33m 965[2mms[22m[39m
+     [33m[2m✓[22m[39m PS512 sign & verify[33m 358[2mms[22m[39m
+   [32m✓[39m verifyWithJwks security [2m(6)[22m
+     [33m[2m✓[22m[39m Should reject algorithm mismatch between JWK and JWT header[33m 391[2mms[22m[39m
+     [33m[2m✓[22m[39m Should allow asymmetric algorithm RS256 with matching alg[33m 332[2mms[22m[39m
+     [33m[2m✓[22m[39m Should reject algorithm confusion attack (HS256 with RSA public key)[33m 612[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/hooks/dom.test.tsx [2m([22m[2m27 tests[22m[2m)[22m[33m 1371[2mms[22m[39m
+   [32m✓[39m Hooks [2m(27)[22m
+     [32m✓[39m useReducer() [2m(1)[22m
+       [33m[2m✓[22m[39m simple[33m 425[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/components.test.tsx [2m([22m[2m44 tests[22m[2m)[22m[33m 1427[2mms[22m[39m
+   [32m✓[39m ErrorBoundary [2m(44)[22m
+     [32m✓[39m streaming [2m(3)[22m
+       [33m[2m✓[22m[39m no error[33m 464[2mms[22m[39m
+[90mstdout[2m | src/hono.test.ts[2m > [22m[2mMiddleware[2m > [22m[2mBasic[2m > [22m[2mlogging and custom header
+[22m[39mGET : http://localhost/hello
+
+[90mstdout[2m | src/hono.test.ts[2m > [22m[2mMiddleware[2m > [22m[2mBasic[2m > [22m[2mlogging and custom header with named param
+[22m[39mGET : http://localhost/hello/message
+
+[90mstdout[2m | src/hono.test.ts[2m > [22m[2mMiddleware[2m > [22m[2mBasic[2m > [22m[2mshould return correct the content-type header
+[22m[39mGET : http://localhost/json
+
+[90mstdout[2m | src/hono.test.ts[2m > [22m[2mMiddleware[2m > [22m[2mBasic[2m > [22m[2mnot found
+[22m[39mGET : http://localhost/foo
+
+[90mstdout[2m | src/hono.test.ts[2m > [22m[2mMiddleware[2m > [22m[2mBasic[2m > [22m[2minternal server error
+[22m[39mGET : http://localhost/error
+
+[90mstdout[2m | src/hono.test.ts[2m > [22m[2mMiddleware[2m > [22m[2mBasic[2m > [22m[2minternal server error
+[22m[39mInternal Server Error
+
+ [32m✓[39m [30m[45m main [49m[39m src/utils/body.test.ts [2m([22m[2m43 tests[22m[2m)[22m[33m 758[2mms[22m[39m
+   [32m✓[39m Parse Body Util [2m(36)[22m
+     [33m[2m✓[22m[39m should reject too many nested objects across multiple fields[33m 304[2mms[22m[39m
+[90mstdout[2m | src/middleware/cache/index.test.ts[2m > [22m[2mCache Middleware[2m > [22m[2mShould not be enabled if caches is not defined
+[22m[39mCache Middleware is not enabled because caches is not defined.
+
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/context-isolation.test.ts [2m([22m[2m20 tests[22m[2m)[22m[33m 1113[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/jwk/index.test.ts [2m([22m[2m57 tests[22m[2m)[22m[33m 998[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/hono.test.ts [2m([22m[2m223 tests[22m[2m)[22m[33m 907[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/cache/index.test.ts [2m([22m[2m153 tests[22m[2m)[22m[33m 1112[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/dom/css.test.tsx [2m([22m[2m35 tests[22m[2m | [22m[33m3 skipped[39m[2m)[22m[33m 1379[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/accept.test.ts [2m([22m[2m32 tests[22m[2m)[22m[33m 1204[2mms[22m[39m
+   [32m✓[39m parseAccept Comprehensive Tests [2m(32)[22m
+     [32m✓[39m Security Cases [2m(3)[22m
+       [33m[2m✓[22m[39m handles extremely large input[33m 969[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m build/declaration-emit.test.ts [2m([22m[2m1 test[22m[2m)[22m[33m 12463[2mms[22m[39m
+   [32m✓[39m published declarations [2m(1)[22m
+     [33m[2m✓[22m[39m let consumers emit declarations for types inferred from hono[33m 12440[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/router/trie-router/router.test.ts [2m([22m[2m186 tests[22m[2m)[22m[32m 230[2mms[22m[39m
+[90mstdout[2m | src/router/reg-exp-router/router.test.ts[2m > [22m[2mRegExpRouter[2m > [22m[2mCommon[2m > [22m[2mComplex[2m > [22m[2mParameter with {.*} regexp
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/reg-exp-router/router.test.ts[2m > [22m[2mRegExpRouter[2m > [22m[2mCommon[2m > [22m[2mDuplicate param name[2m > [22m[2mparent
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/reg-exp-router/router.test.ts[2m > [22m[2mRegExpRouter[2m > [22m[2mCommon[2m > [22m[2mDuplicate param name[2m > [22m[2mchild
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/reg-exp-router/router.test.ts[2m > [22m[2mRegExpRouter[2m > [22m[2mCommon[2m > [22m[2mIncluding slashes[2m > [22m[2mGET /js/main.js
+[22m[39mSkip: This route can not be added with `:label` to RegExpRouter. This is ambiguous
+
+[90mstdout[2m | src/router/reg-exp-router/router.test.ts[2m > [22m[2mRegExpRouter[2m > [22m[2mCommon[2m > [22m[2mCapture complex multiple directories[2m > [22m[2mGET /part1/middle-b/latest
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/reg-exp-router/router.test.ts[2m > [22m[2mRegExpRouter[2m > [22m[2mCommon[2m > [22m[2mCapture complex multiple directories[2m > [22m[2mGET /part1/middle-b/end-c/latest
+[22m[39mSkip: UnsupportedPath
+
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/dom/index.test.tsx [2m([22m[2m318 tests[22m[2m)[22m[33m 7997[2mms[22m[39m
+   [32m✓[39m DOM [2m(267)[22m
+     [32m✓[39m performance [2m(4)[22m
+       [33m[2m✓[22m[39m should be O(N) for each additional element[33m 400[2mms[22m[39m
+[90mstdout[2m | src/router/reg-exp-router/router.test.ts[2m > [22m[2mRegExpRouter[2m > [22m[2mCommon[2m > [22m[2mCapture Group[2m > [22m[2mComplex capturing group[2m > [22m[2mGET request
+[22m[39mSkip: UnsupportedPath
+
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/dom/context.test.tsx [2m([22m[2m12 tests[22m[2m)[22m[33m 625[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/etag/index.test.ts [2m([22m[2m20 tests[22m[2m)[22m[33m 416[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/router/reg-exp-router/router.test.ts [2m([22m[2m207 tests[22m[2m | [22m[33m7 skipped[39m[2m)[22m[33m 424[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/router/smart-router/router.test.ts [2m([22m[2m186 tests[22m[2m)[22m[33m 441[2mms[22m[39m
+[90mstdout[2m | src/helper/ssg/ssg.test.tsx[2m > [22m[2mtoSSG function[2m > [22m[2mshould execute additional processing using afterGenerateHook
+[22m[39mstatic/index.html
+static/about.html
+static/about/some.txt
+static/bravo.html
+static/Charlie.html
+static/post/1.html
+static/post/2.html
+static/user/1.html
+static/user/2.html
+static/user/3.html
+
+[90mstdout[2m | src/helper/ssg/ssg.test.tsx[2m > [22m[2mtoSSG function[2m > [22m[2mshould handle asynchronous afterGenerateHook correctly
+[22m[39mGenerated 10 files.
+
+[90mstdout[2m | src/helper/ssg/ssg.test.tsx[2m > [22m[2mCombined Generate hooks - AfterGenerateHook[2m > [22m[2mshould execute combined AfterGenerateHooks affecting the result
+[22m[39mGeneration completed with status: [33mtrue[39m
+
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/jwt/index.test.ts [2m([22m[2m45 tests[22m[2m)[22m[33m 578[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/ssg/ssg.test.tsx [2m([22m[2m51 tests[22m[2m)[22m[33m 728[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/utils.test.ts [2m([22m[2m163 tests[22m[2m)[22m[33m 316[2mms[22m[39m
+[90mstdout[2m | src/router/pattern-router/router.test.ts[2m > [22m[2mPattern[2m > [22m[2mCommon[2m > [22m[2mDuplicate param name[2m > [22m[2mself
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/pattern-router/router.test.ts[2m > [22m[2mPattern[2m > [22m[2mCommon[2m > [22m[2mDuplicate param name[2m > [22m[2mself with trailing static
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/pattern-router/router.test.ts[2m > [22m[2mPattern[2m > [22m[2mCommon[2m > [22m[2mDuplicate param name[2m > [22m[2mself three times
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/pattern-router/router.test.ts[2m > [22m[2mPattern[2m > [22m[2mCommon[2m > [22m[2mTrailing slash[2m > [22m[2mGET /book/
+[22m[39mSkip: PatternRouter allows trailing slashes
+
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/dom/client.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 488[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/jsx-renderer/index.test.tsx [2m([22m[2m16 tests[22m[2m)[22m[32m 290[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/router/pattern-router/router.test.ts [2m([22m[2m188 tests[22m[2m | [22m[33m4 skipped[39m[2m)[22m[33m 368[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/timing/index.test.ts [2m([22m[2m16 tests[22m[2m)[22m[33m 346[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/pretty-json/index.test.ts [2m([22m[2m12 tests[22m[2m)[22m[33m 301[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/client/client.test.ts [2m([22m[2m128 tests[22m[2m)[22m[33m 573[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/method-override/index.test.ts [2m([22m[2m12 tests[22m[2m)[22m[33m 352[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/csrf/index.test.ts [2m([22m[2m35 tests[22m[2m)[22m[33m 530[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/index.test.tsx [2m([22m[2m272 tests[22m[2m)[22m[33m 819[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/serve-static/index.test.ts [2m([22m[2m40 tests[22m[2m)[22m[32m 280[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/request.test.ts [2m([22m[2m51 tests[22m[2m)[22m[32m 265[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/dom/hooks/index.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 432[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/streaming/sse.test.tsx [2m([22m[2m23 tests[22m[2m)[22m[33m 368[2mms[22m[39m
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mComplex[2m > [22m[2mParameter with {.*} regexp
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mMulti match[2m > [22m[2m`params` per a handler[2m > [22m[2mGET /entry/123/show
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mTrailing wildcard after a label[2m > [22m[2mGET /abc
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mTrailing wildcard after a label[2m > [22m[2mGET /abc/sub
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mTrailing wildcard after a pattern label[2m > [22m[2mGET /abc
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mTrailing wildcard after a pattern label[2m > [22m[2mGET /reverse/abc in reverse registration order
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mTrailing wildcard after a pattern label[2m > [22m[2mPOST /all/abc with ALL middleware
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mTrailing wildcard after a pattern label[2m > [22m[2mGET /posts/2024/comments with nested braces
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mTrailing wildcard after a pattern label[2m > [22m[2mGET /files/foo/detail with regexp meta characters
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mTrailing wildcard after a pattern label[2m > [22m[2mGET /user/123/profile with the default pattern
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mTrailing wildcard after a pattern label[2m > [22m[2mGET /user/123/profile with the default pattern in reverse registration order
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mCapture regex pattern has trailing wildcard[2m > [22m[2mGET /foo/bar/file.html
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mCapture regex param with trailing wildcard on empty remainder[2m > [22m[2mGET /123
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mCapture regex param with trailing wildcard and sibling route[2m > [22m[2mGET /regex-abc/123/ghi
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mTrailing slash[2m > [22m[2mGET /book/
+[22m[39mSkip: LinearRouter allows trailing slashes
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mWildcard route /v1/*/:id/* with a parameter route[2m > [22m[2mGET with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mWildcard route /v1/*/:id/* with a parameter route[2m > [22m[2mGET with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mWildcard route /v1/*/:id/* with a parameter route[2m > [22m[2mALL with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mWildcard route /v1/*/:id/* with a parameter route[2m > [22m[2mALL with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mWildcard route /v1/:first/*/:last/* with a parameter route[2m > [22m[2mGET with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mWildcard route /v1/:first/*/:last/* with a parameter route[2m > [22m[2mGET with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mWildcard route /v1/:first/*/:last/* with a parameter route[2m > [22m[2mALL with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mWildcard route /v1/:first/*/:last/* with a parameter route[2m > [22m[2mALL with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mOverlapping wildcard routes[2m > [22m[2mGET with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mOverlapping wildcard routes[2m > [22m[2mGET with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mOverlapping wildcard routes[2m > [22m[2mALL with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mOverlapping wildcard routes[2m > [22m[2mALL with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware with a wildcard route[2m > [22m[2m/v1/*/b with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware with a wildcard route[2m > [22m[2m/v1/*/b with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware with a wildcard route[2m > [22m[2m/v1/*/b/* with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware with a wildcard route[2m > [22m[2m/v1/*/b/* with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware /prefix/:x{a}/* with static route /prefix/a/static[2m > [22m[2mGET with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware /prefix/:x{a}/* with static route /prefix/a/static[2m > [22m[2mGET with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware /prefix/:x{a}/* with static route /prefix/a/static[2m > [22m[2mALL with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware /prefix/:x{a}/* with static route /prefix/a/static[2m > [22m[2mALL with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware /prefix/:x{a}/* with static route /prefix/a[2m > [22m[2mGET with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware /prefix/:x{a}/* with static route /prefix/a[2m > [22m[2mGET with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware /prefix/:x{a}/* with static route /prefix/a[2m > [22m[2mALL with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware /prefix/:x{a}/* with static route /prefix/a[2m > [22m[2mALL with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware /prefix/:x{a}/:y{b}/* with static route /prefix/a/b/static[2m > [22m[2mGET with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware /prefix/:x{a}/:y{b}/* with static route /prefix/a/b/static[2m > [22m[2mGET with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware /prefix/:x{a}/:y{b}/* with static route /prefix/a/b/static[2m > [22m[2mALL with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mParameter middleware /prefix/:x{a}/:y{b}/* with static route /prefix/a/b/static[2m > [22m[2mALL with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mMiddleware paths that do not nest[2m > [22m[2mShould both apply to a route they both match
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^/]+} and :account[2m > [22m[2mGET with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^/]+} and :account[2m > [22m[2mGET with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^/]+} and :account[2m > [22m[2mALL with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^/]+} and :account[2m > [22m[2mALL with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant and :account{[^/]+}[2m > [22m[2mGET with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant and :account{[^/]+}[2m > [22m[2mGET with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant and :account{[^/]+}[2m > [22m[2mALL with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant and :account{[^/]+}[2m > [22m[2mALL with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{([^/]+)} and :account{(?:[^/]+)}[2m > [22m[2mGET with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{([^/]+)} and :account{(?:[^/]+)}[2m > [22m[2mGET with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{([^/]+)} and :account{(?:[^/]+)}[2m > [22m[2mALL with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{([^/]+)} and :account{(?:[^/]+)}[2m > [22m[2mALL with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{([a-z]+)} and :account{(?:[a-z]+)}[2m > [22m[2mGET with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{([a-z]+)} and :account{(?:[a-z]+)}[2m > [22m[2mGET with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{([a-z]+)} and :account{(?:[a-z]+)}[2m > [22m[2mALL with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{([a-z]+)} and :account{(?:[a-z]+)}[2m > [22m[2mALL with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{(?:[a-z]+)} and :account{([a-z]+)}[2m > [22m[2mGET with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{(?:[a-z]+)} and :account{([a-z]+)}[2m > [22m[2mGET with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{(?:[a-z]+)} and :account{([a-z]+)}[2m > [22m[2mALL with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{(?:[a-z]+)} and :account{([a-z]+)}[2m > [22m[2mALL with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^/]{1,}} and :account{[^/]{1,}}[2m > [22m[2mGET with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^/]{1,}} and :account{[^/]{1,}}[2m > [22m[2mGET with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^/]{1,}} and :account{[^/]{1,}}[2m > [22m[2mALL with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^/]{1,}} and :account{[^/]{1,}}[2m > [22m[2mALL with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^/]+?} and :account{[^/]+?}[2m > [22m[2mGET with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^/]+?} and :account{[^/]+?}[2m > [22m[2mGET with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/middleware/language/index.test.ts[2m > [22m[2mlanguageDetector[2m > [22m[2mDebug Mode[2m > [22m[2mshould log debug information when enabled
+[22m[39mLanguage detected from querystring: fr
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^/]+?} and :account{[^/]+?}[2m > [22m[2mALL with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^/]+?} and :account{[^/]+?}[2m > [22m[2mALL with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^\/]+} and :account{[^\/]+}[2m > [22m[2mGET with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^\/]+} and :account{[^\/]+}[2m > [22m[2mGET with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^\/]+} and :account{[^\/]+}[2m > [22m[2mALL with reverse registration: false
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mEquivalent parameter syntax in wildcard coverage[2m > [22m[2m:tenant{[^\/]+} and :account{[^\/]+}[2m > [22m[2mALL with reverse registration: true
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/router/linear-router/router.test.ts[2m > [22m[2mLinearRouter[2m > [22m[2mCommon[2m > [22m[2mStatic middleware parameter stashes across methods[2m > [22m[2mpreserves captures after an unrelated capture and method registration
+[22m[39mSkip: UnsupportedPath
+
+[90mstdout[2m | src/middleware/language/index.test.ts[2m > [22m[2mlanguageDetector[2m > [22m[2mDebug Mode[2m > [22m[2mshould handle cookie cache errors in debug mode
+[22m[39mLanguage detected from querystring: fr
+
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/method-not-allowed/index.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 251[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/router/linear-router/router.test.ts [2m([22m[2m189 tests[22m[2m | [22m[33m77 skipped[39m[2m)[22m[33m 303[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/language/index.test.ts [2m([22m[2m37 tests[22m[2m)[22m[33m 400[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/cloudflare-workers/websocket.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 192[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/css/index.test.tsx [2m([22m[2m63 tests[22m[2m)[22m[32m 227[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/cookie.test.ts [2m([22m[2m47 tests[22m[2m)[22m[32m 81[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/aws-lambda/handler.test.ts [2m([22m[2m46 tests[22m[2m)[22m[32m 249[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/cloudflare-workers/serve-static.test.ts [2m([22m[2m16 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[32m 217[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/trailing-slash/index.test.ts [2m([22m[2m36 tests[22m[2m)[22m[32m 155[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/mount/index.test.ts [2m([22m[2m51 tests[22m[2m)[22m[32m 285[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/url.test.ts [2m([22m[2m47 tests[22m[2m)[22m[32m 155[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/basic-auth.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 89[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/service-worker/handler.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 137[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/lambda-edge/handler.test.ts [2m([22m[2m41 tests[22m[2m)[22m[33m 374[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/cookie/index.test.ts [2m([22m[2m30 tests[22m[2m)[22m[33m 310[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/proxy/index.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 257[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/body-limit/index.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 267[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/types.test.ts [2m([22m[2m120 tests[22m[2m)[22m[32m 212[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/combine/index.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 253[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/bun/server.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 98[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/secure-headers/index.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 264[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/http-exception.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 128[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/validator/validator.test.ts [2m([22m[2m57 tests[22m[2m)[22m[33m 357[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/basic-auth/index.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 232[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/concurrent.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 215[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/deno/conninfo.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 72[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/client/utils.test.ts [2m([22m[2m32 tests[22m[2m)[22m[33m 320[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/aws-lambda/conninfo.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 99[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/cors/index.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 191[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/route/index.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 190[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/client/types.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 133[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/request-id/index.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 171[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/router/trie-router/node.test.ts [2m([22m[2m91 tests[22m[2m)[22m[32m 141[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/factory/index.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 173[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/jsx-runtime.test.tsx [2m([22m[2m12 tests[22m[2m)[22m[32m 179[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/accepts/accepts.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 224[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/testing/index.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 130[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/ip-restriction/index.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 215[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/ipaddr.test.ts [2m([22m[2m41 tests[22m[2m)[22m[32m 79[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/context-storage/index.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 117[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/vercel/handler.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 146[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/deno/websocket.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 132[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/buffer.test.ts [2m([22m[2m12 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[32m 219[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/cloudflare-pages/handler.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 240[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/websocket/index.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 153[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/compose.test.ts [2m([22m[2m32 tests[22m[2m)[22m[32m 90[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/context.test.ts [2m([22m[2m63 tests[22m[2m)[22m[32m 187[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/ssg/plugins.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[32m 117[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/vercel/conninfo.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 94[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/cloudflare-pages/conninfo.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 155[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/bun/websocket.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 110[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/dom/server.test.tsx [2m([22m[2m27 tests[22m[2m)[22m[32m 140[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/lambda-edge/conninfo.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 68[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/encode.test.ts [2m([22m[2m44 tests[22m[2m)[22m[32m 78[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/stream.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 168[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/powered-by/index.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 121[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/color.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 136[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/mime.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/streaming/stream.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 115[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/intrinsic-element/components.test.tsx [2m([22m[2m42 tests[22m[2m)[22m[32m 129[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/cloudflare-workers/conninfo.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 144[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/crypto.test.ts [2m([22m[2m5 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[32m 42[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/html/index.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/bun/conninfo.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 200[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/cloudflare-workers/utils.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/etag/digest.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 50[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/base.test.tsx [2m([22m[2m11 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/adapter/netlify/conninfo.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 126[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/ssg/utils.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 50[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/hooks/string.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 49[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/jwt/jwa.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/streaming/text.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 51[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/types.test.ts [2m([22m[2m39 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/dev/index.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/filepath.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/validator/utils.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/jsx/children.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/middleware/serve-static/path.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/helper/adapter/index.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/preset/quick.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/utils/html.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m src/preset/tiny.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m [30m[43m node [49m[39m index.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 253[2mms[22m[39m
+ [32m✓[39m [30m[45m main [49m[39m build/jsx-types.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 28236[2mms[22m[39m
+   [32m✓[39m published hono/jsx declarations [2m(2)[22m
+     [33m[2m✓[22m[39m preserves JSX attribute checking with react-jsx[33m 8894[2mms[22m[39m
+     [33m[2m✓[22m[39m preserves JSX attribute checking with react-jsxdev[33m 7738[2mms[22m[39m
+   [32m✓[39m published hono/jsx/dom declarations [2m(2)[22m
+     [33m[2m✓[22m[39m preserves JSX attribute checking with react-jsx[33m 7260[2mms[22m[39m
+     [33m[2m✓[22m[39m preserves JSX attribute checking with react-jsxdev[33m 4325[2mms[22m[39m
+[90mstdout[2m | index.test.ts[2m > [22m[2mworkerd
+[22m[39mYour Worker has access to the following bindings:
+Binding                Resource                  Mode
+env.NAME ("Hono")      Environment Variable      local
+
+
+[90mstdout[2m | index.test.ts[2m > [22m[2mworkerd
+[22m[39m⎔ Starting local server...
+
+[90mstdout[2m | index.test.ts[2m > [22m[2mworkerd[2m > [22m[2mShould return 200 response with the runtime key
+[22m[39m[wrangler:info] Ready on http://127.0.0.1:44229
+
+[90mstdout[2m | index.test.ts[2m > [22m[2mworkerd[2m > [22m[2mShould return 200 response with the runtime key
+[22m[39m[wrangler:info] GET / 200 OK (49ms)
+
+[90mstdout[2m | index.test.ts[2m > [22m[2mworkerd[2m > [22m[2mShould return 200 response with the environment variable
+[22m[39m[wrangler:info] GET /env 200 OK (4ms)
+
+[90mstdout[2m | index.test.ts[2m > [22m[2mworkerd[2m > [22m[2mShould return 200 response with the true message
+[22m[39m[wrangler:info] GET /color 200 OK (3ms)
+
+[90mstdout[2m | index.test.ts[2m > [22m[2mworkerd
+[22m[39m⎔ Shutting down local server...
+
+[90mstdout[2m | index.test.ts[2m > [22m[2mworkerd with NO_COLOR
+[22m[39mYour Worker has access to the following bindings:
+Binding                  Resource                  Mode
+env.NO_COLOR (true)      Environment Variable      local
+
+
+[90mstdout[2m | index.test.ts[2m > [22m[2mworkerd with NO_COLOR
+[22m[39m⎔ Starting local server...
+
+[90mstdout[2m | index.test.ts[2m > [22m[2mworkerd with NO_COLOR[2m > [22m[2mShould return 200 response with the false message
+[22m[39m[wrangler:info] Ready on http://127.0.0.1:41861
+
+[90mstdout[2m | index.test.ts[2m > [22m[2mworkerd with NO_COLOR[2m > [22m[2mShould return 200 response with the false message
+[22m[39m[wrangler:info] GET /color 200 OK (72ms)
+
+[90mstdout[2m | index.test.ts[2m > [22m[2mworkerd with NO_COLOR
+[22m[39m⎔ Shutting down local server...
+
+ [32m✓[39m [30m[45m workerd [49m[39m index.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 544[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m145 passed[39m[22m[90m (145)[39m
+[2m      Tests [22m [1m[32m5767 passed[39m[22m[2m | [22m[33m108 skipped[39m[90m (5875)[39m
+[2m   Start at [22m 14:40:42
+[2m   Duration [22m 36.13s[2m (tests 53%, import 26%, transform 15%, worker 5%)[22m
+
+[2m  Transform [22m [30m[42m fastly [49m[39m [33mtransforming modules took 3.22s[39m[2m · 83% of tracked time, re-done on every run[22m
+[2m            [22m [2mpersist transforms across runs with [22m[33mfsModuleCache: true[39m
+[2m            [22m [2mlearn more: https://vitest.dev/guide/improving-performance#caching-between-reruns[22m
+
+[34m % [39m[2mCoverage report from [22m[33mv8[39m
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   96.84 |    93.66 |   96.25 |   96.81 |                   
+ src               |     100 |    99.45 |     100 |     100 |                   
+  compose.ts       |     100 |      100 |     100 |     100 |                   
+  context.ts       |     100 |      100 |     100 |     100 |                   
+  hono-base.ts     |     100 |      100 |     100 |     100 |                   
+  hono.ts          |     100 |      100 |     100 |     100 |                   
+  ...-exception.ts |     100 |      100 |     100 |     100 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  request.ts       |     100 |    96.87 |     100 |     100 | 115               
+  router.ts        |     100 |      100 |     100 |     100 |                   
+ ...ter/aws-lambda |   77.72 |    68.21 |   78.33 |   77.38 |                   
+  conninfo.ts      |     100 |      100 |     100 |     100 |                   
+  handler.ts       |   76.43 |    65.54 |   77.96 |   76.06 | ...06,613,687,701 
+ src/adapter/bun   |   97.29 |    84.61 |     100 |   97.22 |                   
+  conninfo.ts      |      90 |       90 |     100 |      90 | 21                
+  server.ts        |     100 |      100 |     100 |     100 |                   
+  websocket.ts     |     100 |    78.57 |     100 |     100 | 93-111            
+ ...oudflare-pages |     100 |      100 |     100 |     100 |                   
+  conninfo.ts      |     100 |      100 |     100 |     100 |                   
+  handler.ts       |     100 |      100 |     100 |     100 |                   
+ ...dflare-workers |      92 |    80.64 |   92.85 |    91.3 |                   
+  conninfo.ts      |     100 |      100 |     100 |     100 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  ...tic-module.ts |      50 |      100 |       0 |      50 | 9                 
+  serve-static.ts  |     100 |       60 |     100 |     100 | 33-35             
+  utils.ts         |   83.33 |    81.25 |     100 |   83.33 | 33,40,53          
+  websocket.ts     |     100 |       90 |     100 |     100 | 33                
+ src/adapter/deno  |   72.72 |    83.33 |      40 |   83.33 |                   
+  conninfo.ts      |     100 |      100 |     100 |     100 |                   
+  websocket.ts     |   68.42 |    83.33 |   33.33 |      80 | 24,30-33          
+ ...er/lambda-edge |     100 |    93.02 |     100 |     100 |                   
+  conninfo.ts      |     100 |      100 |     100 |     100 |                   
+  handler.ts       |     100 |    93.02 |     100 |     100 | 170,205,219       
+ ...dapter/netlify |     100 |      100 |     100 |     100 |                   
+  conninfo.ts      |     100 |      100 |     100 |     100 |                   
+ ...service-worker |     100 |      100 |     100 |     100 |                   
+  handler.ts       |     100 |      100 |     100 |     100 |                   
+ ...adapter/vercel |     100 |      100 |     100 |     100 |                   
+  conninfo.ts      |     100 |      100 |     100 |     100 |                   
+  handler.ts       |     100 |      100 |     100 |     100 |                   
+ src/client        |   99.45 |    96.06 |   95.83 |   99.44 |                   
+  client.ts        |   99.14 |    94.56 |   91.66 |   99.13 | 248               
+  ...ult-please.ts |     100 |      100 |     100 |     100 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  utils.ts         |     100 |      100 |     100 |     100 |                   
+ ...helper/accepts |     100 |      100 |     100 |     100 |                   
+  accepts.ts       |     100 |      100 |     100 |     100 |                   
+ ...helper/adapter |   67.74 |    66.66 |      40 |   67.74 |                   
+  index.ts         |   67.74 |    66.66 |      40 |   67.74 | 26,28-37,69,78-83 
+ src/helper/cookie |   96.42 |    92.85 |     100 |   96.42 |                   
+  index.ts         |   96.42 |    92.85 |     100 |   96.42 | 63,71             
+ src/helper/css    |   98.98 |    97.08 |     100 |   98.93 |                   
+  common.ts        |   99.18 |    97.29 |     100 |   99.11 | 165               
+  index.ts         |   98.68 |    96.55 |     100 |   98.66 | 121               
+ src/helper/dev    |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...helper/factory |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ src/helper/html   |   96.55 |       92 |     100 |      96 |                   
+  index.ts         |   96.55 |       92 |     100 |      96 | 46                
+ src/helper/proxy  |     100 |    96.42 |     100 |     100 |                   
+  index.ts         |     100 |    96.42 |     100 |     100 | 64                
+ src/helper/route  |     100 |    95.83 |     100 |     100 |                   
+  index.ts         |     100 |    95.83 |     100 |     100 | 131               
+ src/helper/ssg    |   97.36 |    90.13 |     100 |   97.31 |                   
+  middleware.ts    |      92 |     87.5 |     100 |    91.3 | 20,69             
+  plugins.ts       |     100 |      100 |     100 |     100 |                   
+  ssg.ts           |   96.98 |    86.27 |     100 |   96.96 | ...22,143,166,291 
+  utils.ts         |     100 |      100 |     100 |     100 |                   
+ ...lper/streaming |   96.87 |    82.85 |     100 |   96.82 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  sse.ts           |   96.96 |    88.88 |     100 |   96.96 | 64                
+  stream.ts        |   94.44 |       80 |     100 |   94.44 | 37                
+  text.ts          |     100 |      100 |     100 |     100 |                   
+  utils.ts         |     100 |    71.42 |     100 |     100 | 7                 
+ ...helper/testing |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...lper/websocket |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ src/jsx           |   96.17 |    94.04 |   98.33 |   96.32 |                   
+  base.ts          |   97.36 |    93.33 |     100 |   97.26 | ...47,409,415,425 
+  children.ts      |     100 |      100 |     100 |     100 |                   
+  components.ts    |   95.68 |    91.54 |   96.77 |   96.15 | 21-23,59          
+  constants.ts     |     100 |      100 |     100 |     100 |                   
+  context.ts       |   98.09 |    95.45 |     100 |   98.03 | 86-87             
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  ...ev-runtime.ts |     100 |      100 |     100 |     100 |                   
+  jsx-runtime.ts   |      72 |    79.16 |   66.66 |      75 | 35-36,38,40,44-45 
+  streaming.ts     |   98.76 |    97.95 |     100 |   98.75 | 88                
+  utils.ts         |   95.65 |    97.19 |     100 |   95.49 | ...09-110,182-183 
+ src/jsx/dom       |   96.12 |    95.08 |   94.68 |   95.97 |                   
+  client.ts        |   94.73 |     87.5 |     100 |   94.73 | 34                
+  components.ts    |   93.75 |    83.33 |     100 |   93.75 | 17                
+  context.ts       |   95.65 |       75 |     100 |   95.65 | 11                
+  css.ts           |   78.48 |    77.77 |   68.75 |   77.92 | ...02-204,208,214 
+  index.ts         |     100 |     90.9 |     100 |     100 | 70                
+  ...ev-runtime.ts |     100 |      100 |     100 |     100 |                   
+  jsx-runtime.ts   |       0 |        0 |       0 |       0 |                   
+  render.ts        |   99.09 |    97.08 |     100 |   99.04 | 132,202,266-267   
+  server.ts        |     100 |      100 |     100 |     100 |                   
+  utils.ts         |     100 |      100 |     100 |     100 |                   
+ src/jsx/dom/hooks |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...rinsic-element |   98.42 |    92.12 |   96.96 |   98.38 |                   
+  components.ts    |   98.42 |    92.12 |   96.96 |   98.38 | 173-174,339       
+ src/jsx/hooks     |   96.91 |    90.24 |   92.98 |   96.77 |                   
+  index.ts         |   96.91 |    90.24 |   92.98 |   96.77 | ...67,302,340,346 
+ ...rinsic-element |   99.09 |    93.25 |     100 |   99.05 |                   
+  common.ts        |     100 |      100 |     100 |     100 |                   
+  components.ts    |      99 |    92.94 |     100 |   98.96 | 30                
+ ...are/basic-auth |   96.87 |    96.66 |     100 |   96.87 |                   
+  index.ts         |   96.87 |    96.66 |     100 |   96.87 | 88                
+ ...re/bearer-auth |     100 |    98.41 |     100 |     100 |                   
+  index.ts         |     100 |    98.41 |     100 |     100 | 212               
+ ...are/body-limit |     100 |    93.75 |     100 |     100 |                   
+  index.ts         |     100 |    93.75 |     100 |     100 | 72                
+ ...ddleware/cache |     100 |    97.61 |   93.75 |     100 |                   
+  index.ts         |     100 |    97.61 |   93.75 |     100 | 122,148           
+ ...leware/combine |     100 |    95.45 |     100 |     100 |                   
+  index.ts         |     100 |    95.45 |     100 |     100 | 163               
+ ...eware/compress |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...ontext-storage |    90.9 |       50 |     100 |    90.9 |                   
+  index.ts         |    90.9 |       50 |     100 |    90.9 | 56                
+ ...iddleware/cors |   96.49 |    97.72 |   91.66 |   98.03 |                   
+  index.ts         |   96.49 |    97.72 |   91.66 |   98.03 | 96                
+ ...iddleware/csrf |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...iddleware/etag |   98.88 |    95.08 |     100 |   98.87 |                   
+  digest.ts        |   98.14 |    88.46 |     100 |   98.14 | 23                
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...ip-restriction |   95.28 |    92.68 |     100 |   95.23 |                   
+  index.ts         |   95.28 |    92.68 |     100 |   95.23 | 62,94,154,242,274 
+ ...e/jsx-renderer |   96.66 |    94.44 |     100 |   96.66 |                   
+  index.ts         |   96.66 |    94.44 |     100 |   96.66 | 160               
+ ...middleware/jwk |     100 |      100 |     100 |     100 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  jwk.ts           |     100 |      100 |     100 |     100 |                   
+  keys.test.json   |     100 |      100 |     100 |     100 |                   
+ ...middleware/jwt |      95 |    94.44 |     100 |      95 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  jwt.ts           |      95 |    94.44 |     100 |      95 | 67,75             
+ ...eware/language |     100 |      100 |     100 |     100 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  language.ts      |     100 |      100 |     100 |     100 |                   
+ ...dleware/logger |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...od-not-allowed |     100 |    92.85 |     100 |     100 |                   
+  index.ts         |     100 |    92.85 |     100 |     100 | 107,116           
+ ...ethod-override |     100 |    96.15 |     100 |     100 |                   
+  index.ts         |     100 |    96.15 |     100 |     100 | 121               
+ ...ddleware/mount |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...are/powered-by |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...re/pretty-json |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...are/request-id |     100 |      100 |     100 |     100 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  request-id.ts    |     100 |      100 |     100 |     100 |                   
+ ...secure-headers |   98.85 |    96.42 |     100 |    98.8 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  ...re-headers.ts |   98.85 |    96.42 |     100 |    98.8 | 317               
+ ...e/serve-static |   98.38 |    94.54 |     100 |   98.36 |                   
+  index.ts         |      98 |    93.47 |     100 |      98 | 60                
+  path.ts          |     100 |      100 |     100 |     100 |                   
+ ...leware/timeout |     100 |       80 |     100 |     100 |                   
+  index.ts         |     100 |       80 |     100 |     100 | 53                
+ ...dleware/timing |     100 |      100 |     100 |     100 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  timing.ts        |     100 |      100 |     100 |     100 |                   
+ ...trailing-slash |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ src/preset        |     100 |      100 |     100 |     100 |                   
+  quick.ts         |     100 |      100 |     100 |     100 |                   
+  tiny.ts          |     100 |      100 |     100 |     100 |                   
+ src/request       |     100 |      100 |     100 |     100 |                   
+  constants.ts     |     100 |      100 |     100 |     100 |                   
+ src/router        |     100 |      100 |     100 |     100 |                   
+  utils.ts         |     100 |      100 |     100 |     100 |                   
+ .../linear-router |   97.91 |    91.95 |     100 |   97.64 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  router.ts        |   97.91 |    91.95 |     100 |   97.64 | 66,71             
+ ...pattern-router |     100 |      100 |     100 |     100 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  router.ts        |     100 |      100 |     100 |     100 |                   
+ ...reg-exp-router |   96.77 |       90 |     100 |   96.59 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  matcher.ts       |     100 |      100 |     100 |     100 |                   
+  node.ts          |      90 |    85.05 |     100 |    89.7 | 34-45             
+  ...red-router.ts |     100 |    97.72 |     100 |     100 | 41                
+  router.ts        |    98.5 |     93.1 |     100 |   98.36 | 57                
+  trie.ts          |   97.95 |    85.71 |     100 |   97.82 | 81                
+ ...r/smart-router |   88.57 |    66.66 |     100 |   87.87 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  router.ts        |   88.57 |    66.66 |     100 |   87.87 | 23,43,54,65       
+ ...er/trie-router |     100 |    98.73 |     100 |     100 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  node.ts          |     100 |     98.7 |     100 |     100 | 148               
+  router.ts        |     100 |      100 |     100 |     100 |                   
+ src/utils         |   96.82 |    93.53 |   98.41 |   96.71 |                   
+  accept.ts        |   97.27 |    96.19 |     100 |   97.26 | 53,56,63,247      
+  basic-auth.ts    |     100 |      100 |     100 |     100 |                   
+  body.ts          |   98.38 |    95.91 |     100 |   98.36 | 149               
+  buffer.ts        |      96 |    91.17 |     100 |   95.91 | 56,92             
+  color.ts         |      70 |       50 |   66.66 |      70 | 45-50             
+  compress.ts      |     100 |      100 |     100 |     100 |                   
+  concurrent.ts    |     100 |      100 |     100 |     100 |                   
+  constants.ts     |     100 |      100 |     100 |     100 |                   
+  cookie.ts        |   96.61 |     95.6 |     100 |   96.55 | 182,188,192,196   
+  crypto.ts        |   83.33 |       90 |      80 |   83.33 | 28-30,57          
+  encode.ts        |     100 |       50 |     100 |     100 | 7-11              
+  filepath.ts      |    90.9 |     87.5 |     100 |    90.9 | 18,56             
+  handler.ts       |     100 |      100 |     100 |     100 |                   
+  html.ts          |   97.53 |       90 |     100 |   97.43 | 75,132            
+  ipaddr.ts        |   94.85 |    89.74 |     100 |   94.52 | ...87,219,254,268 
+  mime.ts          |     100 |      100 |     100 |     100 |                   
+  mount.ts         |     100 |    95.65 |     100 |     100 | 25                
+  stream.ts        |     100 |     87.5 |     100 |     100 | 41                
+  url.ts           |     100 |     98.5 |     100 |     100 | 123,182           
+ src/utils/jwt     |   95.43 |    95.34 |     100 |   95.38 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  jwa.ts           |     100 |      100 |     100 |     100 |                   
+  jws.ts           |   90.32 |    88.88 |     100 |   90.32 | ...80,110,113,231 
+  jwt.ts           |   97.45 |     98.3 |     100 |   97.41 | 55,187,219        
+  utf8.ts          |     100 |      100 |     100 |     100 |                   
+ src/validator     |     100 |    96.66 |     100 |     100 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+  validator.ts     |     100 |    96.66 |     100 |     100 | 124               
+-------------------|---------|----------|---------|---------|-------------------
+
+$ tsc -p tsconfig.spec.json && vp test --run
+[90mstderr[2m | src/jsx/dom/server.test.tsx[2m > [22m[2mrenderToString[2m > [22m[2mShould omit options
+[22m[39moptions are not supported yet
+
+[90mstderr[2m | src/jsx/dom/server.test.tsx[2m > [22m[2mrenderToReadableStream[2m > [22m[2mShould omit options, except onError
+[22m[39moptions are not supported yet, except onError
+
+[90mstderr[2m | src/jsx/dom/intrinsic-element/components.test.tsx[2m > [22m[2mintrinsic element[2m > [22m[2mdocument metadata[2m > [22m[2mscript element[2m > [22m[2mshould be fired onError event
+[22m[39mError: Could not load script: "http://localhost/invalid.js"
+    at QueueItem.onErrorWrapped [as onError] (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:38:19)
+    at AsyncResourceQueue._check (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/resources/async-resource-queue.js:37:22)
+    at /home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/resources/async-resource-queue.js:94:20 Invalid URL
+
+[90mstderr[2m | src/jsx/dom/intrinsic-element/components.test.tsx[2m > [22m[2mintrinsic element[2m > [22m[2mdocument metadata[2m > [22m[2mscript element[2m > [22m[2mshould be inserted into body if has no props
+[22m[39mError: Not implemented: window.alert
+    at module.exports (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+    at /home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/Window.js:897:7
+    at about:blank:1:1
+    at Script.runInContext (node:vm:149:12)
+    at Object.runInContext (node:vm:301:6)
+    at processJavaScript (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:238:10)
+    at HTMLScriptElementImpl._innerEval (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:173:5)
+    at /home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:114:12
+    at ResourceQueue.push (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:53:16)
+    at HTMLScriptElementImpl._fetchInternalScript (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:113:21) [90mundefined[39m
+
+[90mstderr[2m | src/jsx/dom/server.test.tsx[2m > [22m[2mrenderToString[2m > [22m[2mShould omit options
+[22m[39moptions are not supported yet
+
+[90mstderr[2m | src/jsx/dom/server.test.tsx[2m > [22m[2mrenderToReadableStream[2m > [22m[2mShould omit options, except onError
+[22m[39moptions are not supported yet, except onError
+
+[90mstderr[2m | src/jsx/dom/intrinsic-element/components.test.tsx[2m > [22m[2mintrinsic element[2m > [22m[2mdocument metadata[2m > [22m[2mscript element[2m > [22m[2mshould be fired onError event
+[22m[39mError: Could not load script: "http://localhost/invalid.js"
+    at QueueItem.onErrorWrapped [as onError] (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:38:19)
+    at AsyncResourceQueue._check (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/resources/async-resource-queue.js:37:22)
+    at /home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/resources/async-resource-queue.js:94:20 Invalid URL
+
+[90mstderr[2m | src/jsx/dom/intrinsic-element/components.test.tsx[2m > [22m[2mintrinsic element[2m > [22m[2mdocument metadata[2m > [22m[2mscript element[2m > [22m[2mshould be inserted into body if has no props
+[22m[39mError: Not implemented: window.alert
+    at module.exports (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+    at /home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/Window.js:897:7
+    at about:blank:1:1
+    at Script.runInContext (node:vm:149:12)
+    at Object.runInContext (node:vm:301:6)
+    at processJavaScript (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:238:10)
+    at HTMLScriptElementImpl._innerEval (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:173:5)
+    at /home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:114:12
+    at ResourceQueue.push (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:53:16)
+    at HTMLScriptElementImpl._fetchInternalScript (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:113:21) [90mundefined[39m
+
+[90mstderr[2m | src/jsx/dom/intrinsic-element/components.test.tsx[2m > [22m[2mintrinsic element[2m > [22m[2mdocument metadata[2m > [22m[2mscript element[2m > [22m[2mshould be fired onError event
+[22m[39mError: Could not load script: "http://localhost/invalid.js"
+    at QueueItem.onErrorWrapped [as onError] (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:38:19)
+    at AsyncResourceQueue._check (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/resources/async-resource-queue.js:37:22)
+    at /home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/resources/async-resource-queue.js:94:20 Invalid URL
+
+[90mstderr[2m | src/jsx/dom/intrinsic-element/components.test.tsx[2m > [22m[2mintrinsic element[2m > [22m[2mdocument metadata[2m > [22m[2mscript element[2m > [22m[2mshould be inserted into body if has no props
+[22m[39mError: Not implemented: window.alert
+    at module.exports (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+    at /home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/Window.js:897:7
+    at about:blank:1:1
+    at Script.runInContext (node:vm:149:12)
+    at Object.runInContext (node:vm:301:6)
+    at processJavaScript (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:238:10)
+    at HTMLScriptElementImpl._innerEval (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:173:5)
+    at /home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:114:12
+    at ResourceQueue.push (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:53:16)
+    at HTMLScriptElementImpl._fetchInternalScript (/home/pavc/.adlc/worktrees/hono/PER-104/hono/node_modules/.pnpm/jsdom@22.1.0_supports-color@10.2.2/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:113:21) [90mundefined[39m
+
+[90mstderr[2m | src/middleware/jwk/index.test.ts[2m > [22m[2mJWK[2m > [22m[2mCredentials in header[2m > [22m[2mShould return a server error if options.jwks_uri returns a 404
+[22m[39mError: failed to fetch JWKS from http://localhost/.well-known/404-jwks.json
+    at Object.verifyWithJwks [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/utils/jwt/jwt.ts:240:13[90m)[39m
+    at jwk [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/middleware/jwk/jwk.ts:144:17[90m)[39m
+    at dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:17[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:469:25
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/middleware/jwk/index.test.ts:244:19
+    at [90mfile:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/vitest@5.0.1_@types+node@24.13.6_@vitest+browser-preview@5.0.1_@vitest+coverage-v8@5.0._7ceb17f5fe3c6ce0281d1b4704edfbfd/node_modules/[4mvitest[24m/dist/chunks/run.C5UmxDPh.js:2783:20
+
+[90mstderr[2m | src/middleware/jwk/index.test.ts[2m > [22m[2mJWK[2m > [22m[2mCredentials in header[2m > [22m[2mShould return a server error if the remotely fetched keys from options.jwks_uri are missing
+[22m[39mError: invalid JWKS response. "keys" field is missing
+    at Object.verifyWithJwks [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/utils/jwt/jwt.ts:244:13[90m)[39m
+    at jwk [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/middleware/jwk/jwk.ts:144:17[90m)[39m
+    at dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:17[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:469:25
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/middleware/jwk/index.test.ts:253:19
+    at [90mfile:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/vitest@5.0.1_@types+node@24.13.6_@vitest+browser-preview@5.0.1_@vitest+coverage-v8@5.0._7ceb17f5fe3c6ce0281d1b4704edfbfd/node_modules/[4mvitest[24m/dist/chunks/run.C5UmxDPh.js:2783:20
+
+[90mstderr[2m | src/middleware/jwk/index.test.ts[2m > [22m[2mJWK[2m > [22m[2mCredentials in header[2m > [22m[2mShould return a server error if the remotely fetched keys from options.jwks_uri are malformed
+[22m[39mError: invalid JWKS response. "keys" field is not an array
+    at Object.verifyWithJwks [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/utils/jwt/jwt.ts:247:13[90m)[39m
+    at jwk [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/middleware/jwk/jwk.ts:144:17[90m)[39m
+    at dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:17[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:469:25
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/middleware/jwk/index.test.ts:262:19
+    at [90mfile:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/vitest@5.0.1_@types+node@24.13.6_@vitest+browser-preview@5.0.1_@vitest+coverage-v8@5.0._7ceb17f5fe3c6ce0281d1b4704edfbfd/node_modules/[4mvitest[24m/dist/chunks/run.C5UmxDPh.js:2783:20
+
+[90mstderr[2m | src/hono.test.ts[2m > [22m[2mMiddleware[2m > [22m[2mBasic[2m > [22m[2minternal server error
+[22m[39mError: Error!
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono.test.ts:1100:13
+    at dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:23[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:46
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono.test.ts:1057:13
+    at dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:23[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:46
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono.test.ts:1052:13
+    at dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:23[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:23:12
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:469:31
+
+[90mstderr[2m | src/hono.test.ts[2m > [22m[2mError handling in middleware[2m > [22m[2mShould handle the error in middleware
+[22m[39mError: Error message
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono.test.ts:1596:11
+    at dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:23[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:46
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono.test.ts:1577:11
+    at dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:23[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:23:12
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:469:31
+    at Hono.#dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:480:6[90m)[39m
+    at Hono.fetch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:499:17[90m)[39m
+    at Hono.request [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:524:17[90m)[39m
+
+[90mstderr[2m | src/hono.test.ts[2m > [22m[2mError handling in middleware[2m > [22m[2mShould handle the error in middleware - async
+[22m[39mError: Error message
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono.test.ts:1600:11
+    at dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:23[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:46
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono.test.ts:1585:11
+    at dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:23[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:23:12
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:469:31
+    at Hono.#dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:480:6[90m)[39m
+    at Hono.fetch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:499:17[90m)[39m
+    at Hono.request [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:524:17[90m)[39m
+
+[90mstderr[2m | src/client/client.test.ts[2m > [22m[2mBasic - JSON[2m > [22m[2mShould get an error response
+[22m[39mTypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at HttpResponse.json [90m(file:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/msw@2.15.0_@types+node@24.13.6_typescript@6.0.3/node_modules/[4mmsw[24m/lib/core/HttpResponse.mjs:57:31[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/client/client.test.ts:103:27
+    at [90mfile:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/msw@2.15.0_@types+node@24.13.6_typescript@6.0.3/node_modules/[4mmsw[24m/lib/core/handlers/RequestHandler.mjs:191:26
+    at HttpHandler.run [90m(file:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/msw@2.15.0_@types+node@24.13.6_typescript@6.0.3/node_modules/[4mmsw[24m/lib/core/handlers/RequestHandler.mjs:157:35[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at executeHandlers [90m(file:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/msw@2.15.0_@types+node@24.13.6_typescript@6.0.3/node_modules/[4mmsw[24m/lib/core/utils/executeHandlers.mjs:11:14[90m)[39m
+    at until [90m(file:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/until-async@3.0.2/node_modules/[4muntil-async[24m/lib/index.js:14:17[90m)[39m
+    at InterceptorHttpNetworkFrame.resolve [90m(file:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/msw@2.15.0_@types+node@24.13.6_typescript@6.0.3/node_modules/[4mmsw[24m/lib/core/experimental/frames/http-frame.mjs:81:41[90m)[39m
+    at Emitter.<anonymous> [90m(file:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/msw@2.15.0_@types+node@24.13.6_typescript@6.0.3/node_modules/[4mmsw[24m/lib/core/experimental/define-network.mjs:80:11[90m)[39m
+[MSW] Encountered an unhandled exception during the handler lookup for "GET http://localhost/bigint". Please see the original error above.
+
+[90mstderr[2m | src/client/client.test.ts[2m > [22m[2mRedirect response - only types[2m > [22m[2mShould infer response type correctly
+[22m[39mTypeError: Failed to parse URL from /
+[90m    at HttpResponse.redirect (node:internal/deps/undici/undici:11638:17)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/client/client.test.ts:1795:27
+[90m    ... 6 lines matching cause stack trace ...[39m
+    at Emitter.<anonymous> [90m(file:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/msw@2.15.0_@types+node@24.13.6_typescript@6.0.3/node_modules/[4mmsw[24m/lib/core/experimental/define-network.mjs:80:11[90m)[39m
+    at Emitter.emitAsPromise [90m(file:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/rettime@0.11.11/node_modules/[4mrettime[24m/build/index.mjs:177:24[90m)[39m {
+  [cause]: TypeError: Invalid URL
+  [90m    at new URL (node:internal/url:895:25)[39m
+  [90m    at HttpResponse.redirect (node:internal/deps/undici/undici:11636:23)[39m
+      at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/client/client.test.ts:1795:27
+      at [90mfile:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/msw@2.15.0_@types+node@24.13.6_typescript@6.0.3/node_modules/[4mmsw[24m/lib/core/handlers/RequestHandler.mjs:191:26
+      at HttpHandler.run [90m(file:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/msw@2.15.0_@types+node@24.13.6_typescript@6.0.3/node_modules/[4mmsw[24m/lib/core/handlers/RequestHandler.mjs:157:35[90m)[39m
+  [90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+      at executeHandlers [90m(file:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/msw@2.15.0_@types+node@24.13.6_typescript@6.0.3/node_modules/[4mmsw[24m/lib/core/utils/executeHandlers.mjs:11:14[90m)[39m
+      at until [90m(file:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/until-async@3.0.2/node_modules/[4muntil-async[24m/lib/index.js:14:17[90m)[39m
+      at InterceptorHttpNetworkFrame.resolve [90m(file:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/msw@2.15.0_@types+node@24.13.6_typescript@6.0.3/node_modules/[4mmsw[24m/lib/core/experimental/frames/http-frame.mjs:81:41[90m)[39m
+      at Emitter.<anonymous> [90m(file:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/msw@2.15.0_@types+node@24.13.6_typescript@6.0.3/node_modules/[4mmsw[24m/lib/core/experimental/define-network.mjs:80:11[90m)[39m {
+    code: [32m'ERR_INVALID_URL'[39m,
+    input: [32m'/'[39m
+  }
+}
+[MSW] Encountered an unhandled exception during the handler lookup for "GET http://localhost/". Please see the original error above.
+
+[90mstderr[2m | src/middleware/language/index.test.ts[2m > [22m[2mlanguageDetector[2m > [22m[2mDebug Mode[2m > [22m[2mshould log errors in debug mode
+[22m[39mError in querystring detector: Error: Simulated error
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/middleware/language/index.test.ts:481:15
+    at detectFromQuery [90m(file:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/vitest@5.0.1_@types+node@24.13.6_@vitest+browser-preview@5.0.1_@vitest+coverage-v8@5.0._7ceb17f5fe3c6ce0281d1b4704edfbfd/node_modules/[4mvitest[24m/dist/chunks/spy.DQ0ZsPbi.js:320:40[90m)[39m
+    at detectLanguage [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/middleware/language/language.ts:250:22[90m)[39m
+    at languageDetector [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/middleware/language/language.ts:310:18[90m)[39m
+    at dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:23[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:23:12
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:469:31
+    at Hono.#dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:480:6[90m)[39m
+    at Hono.fetch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:499:17[90m)[39m
+    at Hono.request [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:524:17[90m)[39m
+
+[90mstderr[2m | src/middleware/language/index.test.ts[2m > [22m[2mlanguageDetector[2m > [22m[2mDebug Mode[2m > [22m[2mshould handle cookie cache errors in debug mode
+[22m[39mFailed to cache language: Error: Invalid cookie name
+    at _serialize [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/utils/cookie.ts:175:11[90m)[39m
+    at serialize [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/utils/cookie.ts:267:10[90m)[39m
+    at generateCookie [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/helper/cookie/index.ts:94:14[90m)[39m
+    at setCookie [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/helper/cookie/index.ts:100:18[90m)[39m
+    at cacheLanguage [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/middleware/language/language.ts:232:5[90m)[39m
+    at detectLanguage [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/middleware/language/language.ts:268:5[90m)[39m
+    at languageDetector [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/middleware/language/language.ts:310:18[90m)[39m
+    at dispatch [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:51:23[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/compose.ts:23:12
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/hono-base.ts:469:31
+
+[90mstderr[2m | src/helper/css/index.test.tsx[2m > [22m[2mCSS Helper[2m > [22m[2mclassNameSlug[2m > [22m[2mShould fall back to different hash values for labels with special characters
+[22m[39mInvalid slug: h-hero-section!
+Invalid slug: h-hero-section?
+
+[90mstderr[2m | src/adapter/cloudflare-workers/websocket.test.ts[2m > [22m[2mupgradeWebSocket middleware[2m > [22m[2mShould receive message and readyState is valid
+[22m[39mRangeError: init["status"] must be in the range of 200 to 599, inclusive.
+[90m    at initializeResponse (node:internal/deps/undici/undici:11910:15)[39m
+[90m    at new Response (node:internal/deps/undici/undici:11668:9)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/cloudflare-workers/websocket.ts:51:10
+    at Array.upgradeWebSocket [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/helper/websocket/index.ts:123:30[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/cloudflare-workers/websocket.test.ts:32:5
+
+[90mstderr[2m | src/helper/css/index.test.tsx[2m > [22m[2mCSS Helper[2m > [22m[2mclassNameSlug[2m > [22m[2mShould fall back to hash when classNameSlug returns invalid characters
+[22m[39mInvalid slug: name!
+
+[90mstderr[2m | src/helper/css/index.test.tsx[2m > [22m[2mCSS Helper[2m > [22m[2mclassNameSlug[2m > [22m[2mShould fall back to hash when classNameSlug starts with a number
+[22m[39mInvalid slug: 1hero
+
+[90mstderr[2m | src/helper/css/index.test.tsx[2m > [22m[2mCSS Helper[2m > [22m[2mclassNameSlug[2m > [22m[2mShould fall back to hash when keyframes name is a reserved keyword
+[22m[39mInvalid slug: none
+
+[90mstderr[2m | src/adapter/cloudflare-workers/websocket.test.ts[2m > [22m[2mupgradeWebSocket middleware[2m > [22m[2mShould call onClose when close event fires
+[22m[39mRangeError: init["status"] must be in the range of 200 to 599, inclusive.
+[90m    at initializeResponse (node:internal/deps/undici/undici:11910:15)[39m
+[90m    at new Response (node:internal/deps/undici/undici:11668:9)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/cloudflare-workers/websocket.ts:51:10
+    at Array.upgradeWebSocket [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/helper/websocket/index.ts:123:30[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/cloudflare-workers/websocket.test.ts:72:5
+
+[90mstderr[2m | src/adapter/cloudflare-workers/websocket.test.ts[2m > [22m[2mupgradeWebSocket middleware[2m > [22m[2mShould call onError when error event fires
+[22m[39mRangeError: init["status"] must be in the range of 200 to 599, inclusive.
+[90m    at initializeResponse (node:internal/deps/undici/undici:11910:15)[39m
+[90m    at new Response (node:internal/deps/undici/undici:11668:9)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/cloudflare-workers/websocket.ts:51:10
+    at Array.upgradeWebSocket [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/helper/websocket/index.ts:123:30[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/cloudflare-workers/websocket.test.ts:95:5
+
+[90mstderr[2m | src/adapter/cloudflare-workers/websocket.test.ts[2m > [22m[2mupgradeWebSocket middleware[2m > [22m[2mShould call server.send when ws.send is called
+[22m[39mRangeError: init["status"] must be in the range of 200 to 599, inclusive.
+[90m    at initializeResponse (node:internal/deps/undici/undici:11910:15)[39m
+[90m    at new Response (node:internal/deps/undici/undici:11668:9)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/cloudflare-workers/websocket.ts:51:10
+    at Array.upgradeWebSocket [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/helper/websocket/index.ts:123:30[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/cloudflare-workers/websocket.test.ts:120:5
+
+[90mstderr[2m | src/adapter/cloudflare-workers/websocket.test.ts[2m > [22m[2mupgradeWebSocket middleware[2m > [22m[2mShould call server.close when ws.close is called
+[22m[39mRangeError: init["status"] must be in the range of 200 to 599, inclusive.
+[90m    at initializeResponse (node:internal/deps/undici/undici:11910:15)[39m
+[90m    at new Response (node:internal/deps/undici/undici:11668:9)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/cloudflare-workers/websocket.ts:51:10
+    at Array.upgradeWebSocket [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/helper/websocket/index.ts:123:30[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/cloudflare-workers/websocket.test.ts:149:5
+
+[90mstderr[2m | src/adapter/aws-lambda/handler.test.ts[2m > [22m[2mhandle[2m > [22m[2mShould return 400 when request contains invalid header names (v2)
+[22m[39mError processing request: TypeError: Headers.set: "a"a" is an invalid header name.
+[90m    at Object.webidl.errors.exception (node:internal/deps/undici/undici:4859:14)[39m
+[90m    at Object.webidl.errors.invalidArgument (node:internal/deps/undici/undici:4870:28)[39m
+[90m    at _Headers.set (node:internal/deps/undici/undici:11472:31)[39m
+    at EventV2Processor.getHeaders [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/aws-lambda/handler.ts:465:19[90m)[39m
+    at EventV2Processor.createRequest [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/aws-lambda/handler.ts:354:26[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/aws-lambda/handler.ts:283:23
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/aws-lambda/handler.test.ts:509:26
+    at [90mfile:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/vitest@5.0.1_@types+node@24.13.6_@vitest+browser-preview@5.0.1_@vitest+coverage-v8@5.0._7ceb17f5fe3c6ce0281d1b4704edfbfd/node_modules/[4mvitest[24m/dist/chunks/run.C5UmxDPh.js:1628:35
+    at [90mfile:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/vitest@5.0.1_@types+node@24.13.6_@vitest+browser-preview@5.0.1_@vitest+coverage-v8@5.0._7ceb17f5fe3c6ce0281d1b4704edfbfd/node_modules/[4mvitest[24m/dist/chunks/run.C5UmxDPh.js:2783:26
+    at [90mfile:///home/pavc/.adlc/worktrees/hono/PER-104/hono/[39mnode_modules/[4m.pnpm[24m/vitest@5.0.1_@types+node@24.13.6_@vitest+browser-preview@5.0.1_@vitest+coverage-v8@5.0._7ceb17f5fe3c6ce0281d1b4704edfbfd/node_modules/[4mvitest[24m/dist/chunks/run.C5UmxDPh.js:3319:20
+
+[90mstderr[2m | src/adapter/aws-lambda/handler.test.ts[2m > [22m[2mhandle[2m > [22m[2mShould return 400 when request contains invalid header names (v1)
+[22m[39mError processing request: TypeError: Headers.append: "a"a" is an invalid header name.
+[90m    at Object.webidl.errors.exception (node:internal/deps/undici/undici:4859:14)[39m
+[90m    at Object.webidl.errors.invalidArgument (node:internal/deps/undici/undici:4870:28)[39m
+[90m    at appendHeader (node:internal/deps/undici/undici:11159:29)[39m
+[90m    at _Headers.append (node:internal/deps/undici/undici:11410:16)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/aws-lambda/handler.ts:515:41
+    at Array.forEach (<anonymous>)
+    at EventV1Processor.getHeaders [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/aws-lambda/handler.ts:515:18[90m)[39m
+    at EventV1Processor.createRequest [90m(/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/aws-lambda/handler.ts:354:26[90m)[39m
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/aws-lambda/handler.ts:283:23
+    at [90m/home/pavc/.adlc/worktrees/hono/PER-104/hono/[39msrc/adapter/aws-lambda/handler.test.ts:586:26
+
+[90mstderr[2m | src/jsx/dom/server.test.tsx[2m > [22m[2mrenderToString[2m > [22m[2mShould omit options
+[22m[39moptions are not supported yet
+
+[90mstderr[2m | src/jsx/dom/server.test.tsx[2m > [22m[2mrenderToReadableStream[2m > [22m[2mShould omit options, except onError
+[22m[39moptions are not supported yet, except onError
+
+
+(exit 0)
+
